@@ -7,6 +7,10 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
+body {
+    overflow-x: hidden;
+}
+
 html,
 body,
 div,
@@ -391,7 +395,8 @@ pre code {
 
 @media screen and (max-width: 480px) {
     .container {
-        max-width: calc(100% - 3em);
+        max-width: calc(100% - 2em);
+        /* max-width: 90%; */
     }
 }
 
@@ -1262,7 +1267,7 @@ pre code {
         margin-left: 41.66667%;
     }
     .row>.col-6-small {
-        width: 50%;
+        width: 48%;
     }
     .row>.off-6-small {
         margin-left: 50%;
@@ -2375,6 +2380,7 @@ input[type="button"]:disabled,
 
 .work-item {
     margin: 0 0 2em 0;
+    transition: .2s ease-in-out;
 }
 
 .work-item .image {
@@ -2466,7 +2472,7 @@ input[type="button"]:disabled,
 
 #header .image.avatar {
     margin: 0 0 1em 0;
-    width: 6.25em;
+    width: 10.25em;
 }
 
 
@@ -3004,5 +3010,28 @@ body.is-touch .poptrox-popup .closer {
 }
 
 .skill {
-    box-shadow: 1px 1px 16px #525252;
+    box-shadow: 1px 1px 5px #525252;
+}
+
+.card {
+    transition: .3s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 1px 1px 16px #494949;
+    transition: .3s ease-in-out;
+}
+
+.img-fluid {
+    max-width: 100px;
+}
+
+.work-item:hover {
+    transform: scale(1.05);
+    transition: .3s ease-in-out;
+}
+
+.caption {
+    font-size: 1.2rem;
 }
