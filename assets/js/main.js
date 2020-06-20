@@ -113,3 +113,36 @@
         });
     });
 })(jQuery);
+const toDark = (event) => {
+    document.querySelector("body").classList.remove("light");
+    document.querySelector("body").classList.add("dark");
+    event.value = "Dark";
+    event.classList.remove("btn-warning");
+    event.classList.add("btn-secondary");
+    document.querySelector("#theme").classList.remove("fa-sun");
+    document.querySelector("#theme").classList.add("fa-moon");
+    localStorage.setItem("theme", "dark");
+};
+const toLight = (event) => {
+    document.querySelector("body").classList.add("light");
+    document.querySelector("body").classList.remove("dark");
+    event.value = "Light";
+    document.querySelector("#theme").classList.remove("fa-moon");
+    document.querySelector("#theme").classList.add("fa-sun");
+    event.classList.add("btn-warning");
+    event.classList.remove("btn-secondary");
+    localStorage.setItem("theme", "light");
+};
+
+const toggle = (event) => {
+    if (event.value === "Light") {
+        toDark(event);
+    } else {
+        toLight(event);
+    }
+};
+const theme = localStorage.getItem("theme");
+if (theme) {
+    if (theme === "light") toLight(document.querySelector("#themeToggler"));
+    else toDark(document.querySelector("#themeToggler"));
+}
