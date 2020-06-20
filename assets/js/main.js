@@ -113,3 +113,22 @@
         });
     });
 })(jQuery);
+const toggle = (event) => {
+    if (event.value === "Light") {
+        document.querySelector("body").classList.remove("light");
+        document.querySelector("body").classList.add("dark");
+        event.value = "Dark";
+        event.classList.remove("btn-warning");
+        event.classList.add("btn-secondary");
+        document.querySelector("#theme").classList.remove("fa-sun");
+        document.querySelector("#theme").classList.add("fa-moon");
+    } else {
+        document.querySelector("body").classList.add("light");
+        document.querySelector("body").classList.remove("dark");
+        event.value = "Light";
+        document.querySelector("#theme").classList.remove("fa-moon");
+        document.querySelector("#theme").classList.add("fa-sun");
+        event.classList.add("btn-warning");
+        event.classList.remove("btn-secondary");
+    }
+};

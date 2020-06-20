@@ -29,7 +29,9 @@ h6,
 p,
 blockquote,
 pre,
-a,
+
+/* a, */
+
 abbr,
 acronym,
 address,
@@ -47,14 +49,15 @@ s,
 samp,
 small,
 strike,
-strong,
 sub,
 sup,
 tt,
 var,
 b,
 u,
-i,
+
+/* i, */
+
 center,
 dl,
 dt,
@@ -81,8 +84,10 @@ details,
 embed,
 figure,
 figcaption,
-footer,
-header,
+
+/* footer,
+header, */
+
 hgroup,
 menu,
 nav,
@@ -93,6 +98,7 @@ summary,
 time,
 mark,
 audio,
+.card,
 video {
     margin: 0;
     padding: 0;
@@ -100,6 +106,9 @@ video {
     font-size: 100%;
     font: inherit;
     vertical-align: baseline;
+    background: var(--bg);
+    color: var(--text);
+    transition: background 500ms ease-in-out, color 1000ms ease-in-out;
 }
 
 article,
@@ -3047,4 +3056,66 @@ body.is-touch .poptrox-popup .closer {
 
 .rounded {
     border-radius: 29px;
+}
+
+:root {
+    --gray0: #f8f8f8;
+    --gray1: #dbe1e8;
+    --gray2: #b2becd;
+    --gray3: #6c7983;
+    --gray4: #454e56;
+    --gray5: #2a2e35;
+    --gray6: #12181b;
+    --blue: #0084a5;
+    --purple: #a82dd1;
+    --yellow: #fff565;
+}
+
+.light {
+    --bg: var(--gray0);
+    --bg-nav: linear-gradient(to right, var(--gray1), var(--gray3));
+    --bg-dropdown: var(--gray0);
+    --text: var(--gray6);
+    --border-color: var(--blue);
+    --bg-solar: var(--yellow);
+}
+
+.dark {
+    --bg: var(--gray5);
+    --bg-nav: linear-gradient(to right, var(--gray5), var(--gray6));
+    --bg-dropdown: var(--gray6);
+    --text: var(--gray0);
+    --border-color: var(--purple);
+    --bg-solar: var(--blue);
+}
+
+header .inner {
+    background: transparent;
+}
+
+header h1 {
+    background: transparent;
+}
+
+footer,
+footer .inner,
+footer .icons,
+footer .copyright,
+footer ul,
+footer li {
+    background: transparent;
+}
+
+#themeToggler {
+    position: fixed;
+    top: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    z-index: 100;
+}
+
+#themeToggler i {
+    font-size: 1.2rem;
 }
