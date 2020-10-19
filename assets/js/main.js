@@ -77,7 +77,7 @@
                         -1 *
                             (parseInt($window.scrollTop()) /
                                 settings.parallaxFactor) +
-                        "px"
+                        "px",
                 );
             });
         });
@@ -91,7 +91,7 @@
 
     // Lightbox gallery.
     $window.on("load", function () {
-        $("#two").poptrox({
+        $("#three").poptrox({
             caption: function ($a) {
                 return (
                     $a.next("h3").text() +
