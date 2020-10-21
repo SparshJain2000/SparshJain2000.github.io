@@ -90,14 +90,22 @@
     // Main Sections: Two.
 
     // Lightbox gallery.
+    const deps = ["Curoid", "Edutracker", "Convo", "BlogApp", "WeatherCast"];
     $window.on("load", function () {
         $("#three").poptrox({
             caption: function ($a) {
                 return (
-                    $a.next("h3").text() +
+                    $a.next("h3").text().trim() +
                     "<a href=" +
                     $a.next("h3").find("a")[0].href +
-                    " target='_blank' class='ml-2 icon brands fa-github'></a>"
+                    " target='_blank' class='ml-2 icon brands fa-github'></a>" +
+                    `${
+                        deps.includes($a.next("h3").text().trim())
+                            ? "<a href=" +
+                              $a.next("h3").find("a")[1].href +
+                              " target='_blank' class='ml-2 icon brands fa-chrome'></a>"
+                            : ""
+                    }`
                 );
             },
             overlayColor: "#2c2c2c",
