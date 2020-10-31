@@ -3,7 +3,19 @@
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
+window.onscroll = function () {
+    myFunction();
+};
 
+function myFunction() {
+    var winScroll =
+        document.body.scrollTop || document.documentElement.scrollTop;
+    var height =
+        document.documentElement.scrollHeight -
+        document.documentElement.clientHeight;
+    var scrolled = (winScroll / height) * 100;
+    document.getElementById("myBar").style.width = scrolled + "%";
+}
 (function ($) {
     var $window = $(window),
         $body = $("body"),
