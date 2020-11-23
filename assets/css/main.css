@@ -213,7 +213,7 @@
     b,
     strong {
         color: #787878;
-        font-weight: 400
+        font-weight: 500
     }
     
     em,
@@ -2345,7 +2345,8 @@
     
     .work-item h3 {
         font-size: 1em;
-        margin: 0 0 .5em 0
+        margin: 0 0 .5em 0;
+        font-weight: 500;
     }
     
     .work-item p {
@@ -3119,4 +3120,8 @@
         height: 8px;
         background: #727cf5;
         width: 0%;
+    }
+    
+    .col-text {
+        color: var(--text);
     }
