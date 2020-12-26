@@ -3,7 +3,7 @@
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
-window.onscroll = function () {
+window.onscroll = function() {
     myFunction();
 };
 
@@ -16,7 +16,7 @@ function myFunction() {
     var scrolled = (winScroll / height) * 100;
     document.getElementById("myBar").style.width = scrolled + "%";
 }
-(function ($) {
+(function($) {
     var $window = $(window),
         $body = $("body"),
         $header = $("#header"),
@@ -40,8 +40,8 @@ function myFunction() {
     });
 
     // Play initial animations on page load.
-    $window.on("load", function () {
-        window.setTimeout(function () {
+    $window.on("load", function() {
+        window.setTimeout(function() {
             $body.removeClass("is-preload");
         }, 100);
     });
@@ -52,17 +52,17 @@ function myFunction() {
         $body.addClass("is-touch");
 
         // Height fix (mostly for iOS).
-        window.setTimeout(function () {
+        window.setTimeout(function() {
             $window.scrollTop($window.scrollTop() + 1);
         }, 0);
     }
 
     // Footer.
-    breakpoints.on("<=medium", function () {
+    breakpoints.on("<=medium", function() {
         $footer.insertAfter($main);
     });
 
-    breakpoints.on(">medium", function () {
+    breakpoints.on(">medium", function() {
         $footer.appendTo($header);
     });
 
@@ -74,27 +74,27 @@ function myFunction() {
     if (browser.name == "ie" || browser.mobile) settings.parallax = false;
 
     if (settings.parallax) {
-        breakpoints.on("<=medium", function () {
+        breakpoints.on("<=medium", function() {
             $window.off("scroll.strata_parallax");
             $header.css("background-position", "");
         });
 
-        breakpoints.on(">medium", function () {
+        breakpoints.on(">medium", function() {
             $header.css("background-position", "left 0px");
 
-            $window.on("scroll.strata_parallax", function () {
+            $window.on("scroll.strata_parallax", function() {
                 $header.css(
                     "background-position",
                     "left " +
-                        -1 *
-                            (parseInt($window.scrollTop()) /
-                                settings.parallaxFactor) +
-                        "px",
+                    -1 *
+                    (parseInt($window.scrollTop()) /
+                        settings.parallaxFactor) +
+                    "px",
                 );
             });
         });
 
-        $window.on("load", function () {
+        $window.on("load", function() {
             $window.triggerHandler("scroll");
         });
     }
@@ -103,9 +103,9 @@ function myFunction() {
 
     // Lightbox gallery.
     const deps = ["Curoid", "Edutracker", "Convo", "BlogApp", "WeatherCast"];
-    $window.on("load", function () {
+    $window.on("load", function() {
         $("#three").poptrox({
-            caption: function ($a) {
+            caption: function($a) {
                 return (
                     $a.next("h3").text().trim() +
                     "<a href=" +
@@ -139,6 +139,8 @@ const toDark = (event) => {
     event.value = "Dark";
     event.classList.remove("btn-warning");
     event.classList.add("btn-secondary");
+
+    document.head.querySelector('meta[name="theme-color"]').content = "#2a2e35";
     document.querySelector("#theme").classList.remove("fa-sun");
     document.querySelector("#theme").classList.add("fa-moon");
     localStorage.setItem("theme", "dark");
@@ -147,6 +149,7 @@ const toLight = (event) => {
     document.querySelector("body").classList.add("light");
     document.querySelector("body").classList.remove("dark");
     event.value = "Light";
+    document.head.querySelector('meta[name="theme-color"]').content = "#ffffff";
     document.querySelector("#theme").classList.remove("fa-moon");
     document.querySelector("#theme").classList.add("fa-sun");
     event.classList.add("btn-warning");
