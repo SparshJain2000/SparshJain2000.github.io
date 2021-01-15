@@ -460,6 +460,16 @@
         <script src="assets/js/main.min.js"></script>
         <script src="assets/js/slidein.min.js"></script>
         <script src="assets/js/toggle.js"></script>
+        <script>
+            if ('serviceWorker' in navigator) {
+                navigator.serviceWorker
+                    .register('/sw.js')
+                    .then(function() {
+                        console.log("Service Worker Registered");
+                    });
+            }
+        </script>
+
 
 </body>
 
