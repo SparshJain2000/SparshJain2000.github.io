@@ -17,5 +17,36 @@
     "theme_color": "#ffffff",
     "background_color": "#000000",
     "display": "fullscreen",
-    "start_url": "/"
+    "start_url": "/",
+    "shortcuts": [{
+            "name": "About Me",
+            "short_name": "About",
+            "url": "/#one",
+            "icons": [{ "src": "/android-icon-96x96.png", "sizes": "96x96" }]
+        },
+        {
+            "name": "Work Experience",
+            "short_name": "Experience",
+            "url": "/#two",
+            "icons": [{ "src": "/android-icon-96x96.png", "sizes": "96x96" }]
+        },
+        {
+            "name": "Projects",
+            "short_name": "Projects",
+            "url": "/#three",
+            "icons": [{ "src": "/android-icon-96x96.png", "sizes": "96x96" }]
+        },
+        {
+            "name": "My skills",
+            "short_name": "Skills",
+            "url": "/#five",
+            "icons": [{ "src": "/android-icon-96x96.png", "sizes": "96x96" }]
+        },
+        {
+            "name": "Get in touch",
+            "short_name": "Contact",
+            "url": "/#four",
+            "icons": [{ "src": "/android-icon-96x96.png", "sizes": "96x96" }]
+        }
+    ]
 }
