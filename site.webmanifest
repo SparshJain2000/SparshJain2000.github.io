@@ -16,7 +16,7 @@
     ],
     "theme_color": "#ffffff",
     "background_color": "#000000",
-    "display": "fullscreen",
+    "display": "standalone",
     "start_url": "/",
     "shortcuts": [{
             "name": "About Me",
