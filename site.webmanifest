@@ -1,9 +1,9 @@
 {
-    "name": "Sparsh Jain",
+    "name": "My Portfolio",
     "short_name": "Sparsh",
     "icons": [{
             "src": "/short.png",
-            "sizes": "113x113",
+            "sizes": "182x182",
             "type": "image/png",
             "purpose": "maskable"
         },
@@ -28,31 +28,31 @@
             "name": "About Me",
             "short_name": "About",
             "url": "/#one",
-            "icons": [{ "src": "/short.png", "sizes": "113x113" }]
+            "icons": [{ "src": "/short.png", "sizes": "182x182" }]
         },
         {
             "name": "Work Experience",
             "short_name": "Experience",
             "url": "/#two",
-            "icons": [{ "src": "/short.png", "sizes": "113x113" }]
+            "icons": [{ "src": "/short.png", "sizes": "182x182" }]
         },
         {
             "name": "Projects",
             "short_name": "Projects",
             "url": "/#three",
-            "icons": [{ "src": "/short.png", "sizes": "113x113" }]
+            "icons": [{ "src": "/short.png", "sizes": "182x182" }]
         },
         {
             "name": "My skills",
             "short_name": "Skills",
             "url": "/#five",
-            "icons": [{ "src": "/short.png", "sizes": "113x113" }]
+            "icons": [{ "src": "/short.png", "sizes": "182x182" }]
         },
         {
             "name": "Get in touch",
             "short_name": "Contact",
             "url": "/#four",
-            "icons": [{ "src": "/short.png", "sizes": "113x113" }]
+            "icons": [{ "src": "/short.png", "sizes": "182x182" }]
         }
     ]
 }
