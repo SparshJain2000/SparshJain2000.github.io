@@ -210,7 +210,6 @@
                     <h3>BlogApp<span class='float-right mr-3'><a href="https://github.com/SparshJain2000/blogApp"
                                 class='icon brands fa-github'></a>
                         </span>
-
                         <span class='float-right mr-3'><a href="https://blogg--app.herokuapp.com/"
                                 class='icon brands fa-chrome'></a>
                         </span>
@@ -242,7 +241,8 @@
                 <h2>My Skills</h2>
             </header>
             <div class="container px-0 hideme">
-                <div class="block-card p-3" onclick="toggleField(event,'front')" style="cursor:pointer">
+                <div class="block-card p-3" onclick="toggleField(event,'front')" style="cursor:pointer"
+                    id='frontHeader'>
                     <h3 class="mb-0"><span>
                             <i class="fab fa-js"></i>
                         </span> Front-end Web Development
@@ -327,7 +327,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="block-card p-3 mt-3" onclick="toggleField(event,'back')" style="cursor:pointer">
+                <div class="block-card p-3 mt-3" onclick="toggleField(event,'back')" style="cursor:pointer"
+                    id='backHeader'>
                     <h3 class="mb-0"><span><i class="fa fa-cogs"></i></span> Back-end Web Development
                         <span class="float-right" style="cursor:pointer"><i id="back-toggle"
                                 class="fa fa-lg fa-angle-down"></i></span>
@@ -408,7 +409,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="block-card p-3 mt-3" onclick="toggleField(event,'comp')" style="cursor:pointer">
+                <div class="block-card p-3 mt-3" onclick="toggleField(event,'comp')" style="cursor:pointer"
+                    id='compHeader'>
                     <h3 class="mb-0"><span><i class="fa fa-laptop-code"></i></span>
                         Competitive Programming
                         <span class="float-right" style="cursor:pointer"><i id="comp-toggle"

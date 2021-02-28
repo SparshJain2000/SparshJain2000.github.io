@@ -9,6 +9,6 @@ toggleField = (e, id) => {
         "class",
         `${openFields[id] ? "fa fa-lg fa-angle-up" : "fa fa-lg fa-angle-down"}`,
     );
-
+    $(`#${id}Header`).toggleClass("selectedHeader");
     $(`#${id}`).slideToggle("slow");
 };
