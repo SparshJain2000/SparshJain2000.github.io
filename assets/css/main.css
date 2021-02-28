@@ -3137,3 +3137,12 @@ hr {
 .col-text {
     color: var(--text);
 }
+.selectedHeader {
+    background: #727cf5;
+    border-top: 3px solid var(--text);
+}
+.selectedHeader h3,
+.selectedHeader span {
+    background: #727cf5;
+    color: var(--gray1);
+}
