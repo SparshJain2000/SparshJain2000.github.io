@@ -206,13 +206,13 @@ a {
     -ms-transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
     transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
     border-bottom: dotted 1px;
-    color: #49bf9d;
+    color: #727cf5;
     text-decoration: none;
 }
 
 a:hover {
     border-bottom-color: transparent;
-    color: #727cf5 !important;
+    color: #49bf9d !important;
     text-decoration: none;
 }
 
@@ -2390,8 +2390,7 @@ input[type="submit"]:disabled {
     background-blend-mode: multiply;
     background-color: rgba(0, 0, 0, 0.6);
     background-attachment: scroll, scroll;
-    background-image: url(images/overlay.png),
-        url(../../images/bg-compressed.jpg);
+    background-image: url(images/overlay.png), url(../../images/bg2.jpg);
     background-position: top left, top left;
     background-repeat: repeat, no-repeat;
     background-size: auto, 150%;
@@ -2452,6 +2451,9 @@ input[type="submit"]:disabled {
 
 #footer .icons a {
     color: rgba(255, 255, 255, 0.4);
+}
+#footer .icons a:hover {
+    color: #727cf5 !important;
 }
 
 #footer .copyright {
