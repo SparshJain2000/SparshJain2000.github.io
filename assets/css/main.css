@@ -11,11 +11,13 @@ html {
     --main: #00909e;
     --main-light: #00909e1f;
     --highlight: #00bbf0;
+    --header: #555;
 }
 [data-theme="dark"] {
     --main: #f37121;
     --main-light: #f371211f;
     --highlight: #ffb740;
+    --header: #fff;
 }
 body {
     overflow-x: hidden;
@@ -3015,7 +3017,7 @@ body.is-touch .poptrox-popup .nav-previous {
     --bg: var(--gray5);
     --bg-nav: linear-gradient(to right, var(--gray5), var(--gray6));
     --bg-dropdown: var(--gray6);
-    --text: var(--gray0);
+    --text: var(--gray1);
     --border-color: var(--purple);
     --bg-solar: var(--blue);
 }
