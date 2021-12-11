@@ -13,14 +13,19 @@ html {
     --highlight: #00bbf0;
 }
 [data-theme="dark"] {
-    --main: #00909e;
-    --main-light: #00909e1f;
-    --highlight: #00bbf0;
+    --main: #f37121;
+    --main-light: #f371211f;
+    --highlight: #ffb740;
 }
 body {
     overflow-x: hidden;
 }
-
+.flex-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 .card,
 abbr,
 acronym,
@@ -3036,12 +3041,15 @@ footer ul {
     position: fixed;
     top: 30px;
     right: 30px;
-    width: 50px;
-    height: 50px;
+    width: 45px;
+    height: 45px;
     border-radius: 50%;
     z-index: 1000;
 }
-
+#themeToggler img {
+    width: 25px;
+    height: 25px;
+}
 #themeToggler i {
     font-size: 1.2rem;
 }
@@ -3163,4 +3171,22 @@ hr {
 .selectedHeader span {
     background: var(--main);
     color: var(--gray1);
+}
+/* #themeToggler:hover,
+#themeToggler:active,
+#themeToggler:focus {
+    border: transparent;
+} */
+.btn-light {
+    background-color: #eee;
+}
+.shadow {
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3) !important;
+}
+.dark .shadow {
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.7) !important;
+}
+.btn-light {
+    background-color: #99ccff67 !important;
+    border: transparent !important;
 }
