@@ -11,7 +11,7 @@ html {
     --main: #00909e;
     --main-light: #00909e1f;
     --highlight: #00bbf0;
-    --header: #555;
+    --header: #888;
 }
 [data-theme="dark"] {
     --main: #f37121;
@@ -3179,9 +3179,7 @@ hr {
 #themeToggler:focus {
     border: transparent;
 } */
-.btn-light {
-    background-color: #eee;
-}
+
 .shadow {
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3) !important;
 }
@@ -3189,6 +3187,6 @@ hr {
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.7) !important;
 }
 .btn-light {
-    background-color: #99ccff67 !important;
+    background-color: #d3e6fd !important;
     border: transparent !important;
 }
