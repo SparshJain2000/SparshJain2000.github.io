@@ -9,12 +9,15 @@ html {
     /* --main: #32c1cd;
     --main-light: #32c1cd1f; */
     --main: #00909e;
+    --main-shadow: #b0f4fd;
     --main-light: #00909e1f;
     --highlight: #00bbf0;
     --header: #888;
 }
 [data-theme="dark"] {
     --main: #f37121;
+    --main-shadow: #fdddb0;
+
     --main-light: #f371211f;
     --highlight: #ffb740;
     --header: #fff;
@@ -1949,16 +1952,26 @@ input[type="radio"] + label:before {
 }
 
 .image.avatar {
-    transition: 0.3s ease-in-out;
     border-radius: 100%;
+    border: 0.15rem solid var(--main);
     box-shadow: 0 0 10px #8a8a8a;
+    -webkit-transition: -webkit-all 0.3s ease;
+    -moz-transition: -moz-all 0.3s ease;
+    -o-transition: -o-all 0.3s ease;
+    /* edited the line below by adding top also*/
+    transition: all 0.3s ease, top 0.3s ease;
+    transition: all 0.3s ease;
 }
 
-.image.avatar :hover {
+.image.avatar:hover {
     border-radius: 100%;
-    box-shadow: 0 0 30px #b0f4fd;
+    box-shadow: 0 0 30px var(--main-shadow);
+    border: 0rem solid var(--main);
+
     transform: scale(1.1);
-    transition: 0.3s ease-in-out;
+    /* transition: all 0.3s; */
+
+    /* transition: 0.3s ease-in-out; */
 }
 
 .image.avatar:before {
@@ -3047,6 +3060,7 @@ footer ul {
     height: 45px;
     border-radius: 50%;
     z-index: 1000;
+    transition: all 0.25s ease;
 }
 #themeToggler img {
     width: 25px;
@@ -3295,20 +3309,20 @@ hr {
 }
 
 #themeToggler:hover {
-    transform: translateY(-0.4rem);
+    transform: translateY(-0.1rem);
     box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5) !important;
 }
 
 #themeToggler:active {
-    transform: translateY(-0.1rem);
+    transform: translateY(0.4rem);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5) !important;
 }
 .dark #themeToggler:hover {
-    transform: translateY(-0.4rem);
+    transform: translateY(-0.1rem);
     box-shadow: 0 15px 25px rgba(0, 0, 0, 0.9) !important;
 }
 
 .dark #themeToggler:active {
-    transform: translateY(-0.1rem);
+    transform: translateY(0.4rem);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.9) !important;
 }
