@@ -3322,16 +3322,17 @@ hr {
     border-radius: 10px;
 }
 
-.glow-on-hover:active {
+.glow-on-hover:hover .glow-on-hover:active {
     color: #000;
 }
 
+.glow-on-hover:hover:after,
 .glow-on-hover:active:after {
     background: transparent;
     box-shadow: none !important;
 }
 
-.glow-on-hover:hover:before {
+.glow-on-hover:before {
     opacity: 1;
 }
 
