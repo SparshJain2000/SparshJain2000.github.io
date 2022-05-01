@@ -8,6 +8,12 @@ $(function () {
 
 $(document).ready(function () {
     /* Every time the window is scrolled ... */
+    $("#one").addClass("hide");
+    $("#two").addClass("hide");
+    setTimeout(() => {
+        $("#one").addClass("visible");
+        $("#two").addClass("visible");
+    }, 200);
     $(window).scroll(function () {
         /* Check the location of each desired element */
         $(".hideme").each(function (i) {
@@ -16,7 +22,7 @@ $(document).ready(function () {
             var bottom_of_window = $(window).scrollTop() + $(window).height();
 
             /* If the object is completely visible in the window, fade it it */
-            console.log(bottom_of_window, bottom_of_object);
+
             if (bottom_of_window > bottom_of_object + 60) {
                 // $(this).animate({ opacity: "1", right: "0" }, 100);
                 // $(this).show("slide", { direction: "left" }, 1000);

@@ -6,7 +6,13 @@
 window.onscroll = function () {
     myFunction();
 };
-
+const scrollElementIntoView = (e, query) => {
+    document
+        .querySelectorAll("#sidebar ul li")
+        .forEach((li) => li.classList.remove("active"));
+    e.classList.add("active");
+    document.querySelector(query).scrollIntoView({ behaviour: "smooth" });
+};
 function myFunction() {
     var winScroll =
         document.body.scrollTop || document.documentElement.scrollTop;
