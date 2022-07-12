@@ -24,6 +24,8 @@ html {
 }
 body {
     overflow-x: hidden;
+    background: var(--bg);
+    transition: background 0.3s ease-in-out;
 }
 .flex-center {
     display: flex;
@@ -88,7 +90,7 @@ q,
 ruby,
 s,
 samp,
-section,
+// section,
 small,
 span,
 strike,
@@ -114,9 +116,10 @@ video {
     font-size: 100%;
     font: inherit;
     vertical-align: baseline;
-    background: var(--bg);
-    color: var(--text);
-    transition: background 0.5s ease-in-out, color 1s ease-in-out;
+    // background: var(--bg);
+    background-color: transparent;
+    // color: var(--text);
+    // transition: background 0.3s ease-in-out, color 1s ease-in-out;
 }
 
 article,
@@ -129,7 +132,14 @@ header,
 hgroup,
 menu,
 nav,
-section {
+section,
+.card,
+#one,
+#two,
+#main {
+    background: var(--bg);
+    color: var(--text);
+    transition: background 0.3s ease-in-out, color 1s ease-in-out;
     display: block;
 }
 
