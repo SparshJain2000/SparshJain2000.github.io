@@ -25,7 +25,7 @@ html {
 body {
     overflow-x: hidden;
     background: var(--bg);
-    transition: background 0.3s ease-in-out;
+    transition: background 0.3s ease-in-out !important;
 }
 .flex-center {
     display: flex;
@@ -118,6 +118,7 @@ video {
     vertical-align: baseline;
     // background: var(--bg);
     background-color: transparent;
+
     // color: var(--text);
     // transition: background 0.3s ease-in-out, color 1s ease-in-out;
 }
@@ -138,7 +139,7 @@ section,
 #main {
     background: var(--bg);
     color: var(--text);
-    transition: background 0.3s ease-in-out, color 1s ease-in-out;
+    transition: background 0.3s ease-in-out, color 1s ease-in-out !important;
     display: block;
 }
 
@@ -206,18 +207,18 @@ body {
     background: #fff;
 }
 
-body.is-preload *,
-body.is-preload :after,
-body.is-preload :before {
-    -moz-animation: none !important;
-    -webkit-animation: none !important;
-    -ms-animation: none !important;
-    animation: none !important;
-    -moz-transition: none !important;
-    -webkit-transition: none !important;
-    -ms-transition: none !important;
-    transition: none !important;
-}
+// body.is-preload *,
+// body.is-preload :after,
+// body.is-preload :before {
+//     // -moz-animation: none !important;
+//     // -webkit-animation: none !important;
+//     // -ms-animation: none !important;
+//     // animation: none !important;
+//     // -moz-transition: none !important;
+//     // -webkit-transition: none !important;
+//     // -ms-transition: none !important;
+//     // transition: none !important;
+// }
 
 body,
 input,
@@ -1873,7 +1874,7 @@ input[type="radio"] + label:before {
     -moz-transition: opacity 0.2s ease-in-out;
     -webkit-transition: opacity 0.2s ease-in-out;
     -ms-transition: opacity 0.2s ease-in-out;
-    transition: opacity 0.2s ease-in-out;
+    transition: opacity 0.2s ease-in-out !important;
     background: url(images/overlay.png);
     border-radius: 0.35em;
     content: "";
@@ -1968,8 +1969,7 @@ input[type="radio"] + label:before {
     -moz-transition: -moz-all 0.3s ease;
     -o-transition: -o-all 0.3s ease;
     /* edited the line below by adding top also*/
-    transition: all 0.3s ease, top 0.3s ease;
-    transition: all 0.3s ease;
+    transition: all 0.3s ease, top 0.3s ease !important;
 }
 
 .image.avatar:hover {
@@ -2268,13 +2268,13 @@ input[type="submit"] {
     -ms-appearance: none;
     appearance: none;
     -moz-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out,
-        border-color 0.2s ease-in-out;
+        border-color 0.2s ease-in-out !important;
     -webkit-transition: background-color 0.2s ease-in-out,
-        color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+        color 0.2s ease-in-out, border-color 0.2s ease-in-out !important;
     -ms-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out,
-        border-color 0.2s ease-in-out;
+        border-color 0.2s ease-in-out !important;
     transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out,
-        border-color 0.2s ease-in-out;
+        border-color 0.2s ease-in-out !important;
     background-color: transparent;
     border-radius: 0.35em;
     border: solid 3px #efefef;
@@ -2925,7 +2925,7 @@ body.is-touch .poptrox-popup .nav-previous {
         display: inline;
     }
     #footer {
-        background-attachment: scroll;
+        background-attachment: scroll !important;
         background-color: #1f1815;
         background-image: url(images/overlay.png), url(../../images/bg2.jpg);
         background-position: top left, bottom center;
@@ -3097,7 +3097,6 @@ header h1 {
     background: 0 0;
 }
 
-footer,
 footer .copyright,
 footer .icons,
 footer .inner,
@@ -3136,7 +3135,6 @@ p {
 .fa-chrome {
     color: #a9a9a9;
 }
-
 .text-black {
     color: var(--text) !important;
     text-decoration: none !important;
@@ -3325,9 +3323,9 @@ hr {
     filter: blur(5px);
     width: calc(100% + 4px);
     height: calc(100% + 4px);
-    animation: glowing 20s linear infinite;
+    animation: glowing 20s linear infinite !important;
     opacity: 0;
-    transition: opacity 0.3s ease-in-out;
+    transition: opacity 0.3s ease-in-out !important;
     border-radius: 10px;
 }
 
@@ -3412,4 +3410,25 @@ hr {
     color: white;
     font-weight: 500;
     transform-origin: 0 0 !important;
+}
+#header .container {
+    display: flex;
+    align-items: end;
+    width: auto;
+    flex-direction: column;
+    justify-content: space-between;
+    @media screen and (max-width: 980px) {
+        align-items: center;
+    }
+    .icons {
+        // margin-top: 30px;
+        a {
+            color: #b2b2b2 !important;
+            &:hover {
+                border-bottom-color: transparent;
+                color: var(--highlight) !important;
+                text-decoration: none;
+            }
+        }
+    }
 }
