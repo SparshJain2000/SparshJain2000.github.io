@@ -127,7 +127,6 @@ aside,
 details,
 figcaption,
 figure,
-footer,
 header,
 hgroup,
 menu,
@@ -2449,7 +2448,7 @@ input[type="submit"]:disabled {
     -moz-flex-shrink: 0;
     -webkit-flex-shrink: 0;
     -ms-flex-shrink: 0;
-    flex-shrink: 0;
+    flex-shrink: 0 !important;
     width: 100%;
 }
 
@@ -3104,7 +3103,7 @@ footer .icons,
 footer .inner,
 footer li,
 footer ul {
-    background: 0 0;
+    background: 0 0 !important;
 }
 
 #themeToggler {
