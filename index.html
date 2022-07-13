@@ -377,9 +377,9 @@
                             </div>
 
                             <div class="py-1 px-2 my-auto  col-3-large col-6-small">
-                                <img loading='lazy' class="mx-auto d-block img-fluid" src="images/jquery.png"
+                                <img loading='lazy' class="mx-auto d-block img-fluid" src="images/angular.png"
                                     alt="image">
-                                <p class='my-2 text-skill'>J Query</p>
+                                <p class='my-2 text-skill'>Angular</p>
 
                             </div>
 
@@ -403,19 +403,24 @@
                         <hr class="mb-2 mt-0 hr-purple">
                         <div class="card-text m-2 row justify-content-around">
 
-                            <div class="py-1 px-2 my-auto col-3-large col-4-small">
+                            <div class="py-1 px-2 my-auto col-3-large col-6-small">
                                 <img loading='lazy' class="mx-auto d-block img-fluid" src="images/nodejs.png"
                                     alt="image">
                                 <p class='my-2 text-skill'>Node JS</p>
                             </div>
-                            <div class="py-1 px-2 my-auto col-3-large col-4-small">
+                            <div class="py-1 px-2 my-auto col-3-large col-6-small">
                                 <img loading='lazy' class="mx-auto d-block img-fluid" src="images/deno.png" alt="image">
                                 <p class='my-2 text-skill'>DenoJS</p>
                             </div>
-                            <div class="py-1 px-2 my-auto col-3-large col-4-small">
+                            <div class="py-1 px-2 my-auto col-3-large col-6-small">
                                 <img loading='lazy' class="mx-auto d-block img-fluid" src="images/flask.png"
                                     alt="image">
                                 <p class='my-2 text-skill'>Flask</p>
+                            </div>
+                            <div class="py-1 px-2 my-auto col-3-large col-6-small">
+                                <img loading='lazy' class="mx-auto d-block img-fluid" src="images/spring.png"
+                                    alt="image">
+                                <p class='my-2 text-skill'>Spring</p>
                             </div>
                             <!-- <div class="py-1 px-2 my-auto col-3-large col-6-small">
                                 <img loading='lazy' class="mx-auto d-block img-fluid" src="images/graphql.png"
@@ -529,7 +534,7 @@
                 <div class="block-card p-3 mt-3" onclick="toggleField(event,'comp')" style="cursor:pointer"
                     id='compHeader'>
                     <h3 class="mb-0"><span><i class="fa fa-laptop-code"></i></span>
-                        Competitive Programming
+                        Programming Languages
                         <span class="float-right" style="cursor:pointer"><i id="comp-toggle"
                                 class="fa fa-lg fa-angle-down"></i></span>
                     </h3>
@@ -625,7 +630,7 @@
                     <ul class="labeled-icons">
                         <li>
                             <h3 class="icon solid fa-home"><span class="label">Address</span></h3>
-                            45-a New Mandi<br /> Muzaffarnagar, 251001<br />UP, India
+                            45-A New Mandi<br /> Muzaffarnagar, 251001<br />UP, India
                         </li>
                         <li>
                             <h3 class="icon solid fa-mobile-alt"><span class="label">Phone</span></h3>
@@ -671,13 +676,14 @@
                     console.log("Service Worker Registered");
                 });
         }
+        let loaded = false;
         const loader = (css, js, postJS) => {
             var total = css.length + js.length,
                 now = 0, s;
 
             var ready = () => {
                 now++;
-                if (now == total) { document.getElementById("loading").remove(); }
+                if (now == total) { loaded = true; document.getElementById("loading").remove(); }
             };
 
             css.forEach((url, i) => {
@@ -716,13 +722,12 @@
                 "assets/css/bootstrap.css",
                 "assets/css/fontawesome-all.min.css",
                 "assets/css/main.min.css"
-            ], [], ["assets/js/main.min.js", "assets/js/util.min.js"]);
+            ], [], ["assets/js/breakpoints.min.js", "assets/js/main.min.js", "assets/js/util.min.js"]);
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/jquery.poptrox.min.js"></script>
     <script src="assets/js/browser.min.js"></script>
-    <script src="assets/js/breakpoints.min.js"></script>
     <script src="assets/js/toggle.js"></script>
     <script src="assets/js/slidein.min.js"></script>
 

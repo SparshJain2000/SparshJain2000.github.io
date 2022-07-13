@@ -22,109 +22,118 @@ function myFunction() {
     var scrolled = (winScroll / height) * 100;
     document.getElementById("myBar").style.width = scrolled + "%";
 }
-(function ($) {
-    var $window = $(window),
-        $body = $("body"),
-        $header = $("#header"),
-        $footer = $("#footer"),
-        $main = $("#main"),
-        settings = {
-            // Parallax background effect?
-            parallax: true,
+try {
+    (function ($) {
+        var $window = $(window),
+            $body = $("body"),
+            $header = $("#header"),
+            $footer = $("#footer"),
+            $main = $("#main"),
+            settings = {
+                // Parallax background effect?
+                parallax: true,
 
-            // Parallax factor (lower = more intense, higher = less intense).
-            parallaxFactor: 20,
-        };
+                // Parallax factor (lower = more intense, higher = less intense).
+                parallaxFactor: 20,
+            };
 
-    // Breakpoints.
-    breakpoints({
-        xlarge: ["1281px", "1800px"],
-        large: ["981px", "1280px"],
-        medium: ["737px", "980px"],
-        small: ["481px", "736px"],
-        xsmall: [null, "480px"],
-    });
+        // Breakpoints.
+        breakpoints({
+            xlarge: ["1281px", "1800px"],
+            large: ["981px", "1280px"],
+            medium: ["737px", "980px"],
+            small: ["481px", "736px"],
+            xsmall: [null, "480px"],
+        });
 
-    // Play initial animations on page load.
-    $window.on("load", function () {
-        window.setTimeout(function () {
-            $body.removeClass("is-preload");
-        }, 100);
-    });
+        // Play initial animations on page load.
+        $window.on("load", function () {
+            window.setTimeout(function () {
+                $body.removeClass("is-preload");
+            }, 100);
+        });
 
-    // Touch?
-    if (browser.mobile) {
-        // Turn on touch mode.
-        $body.addClass("is-touch");
+        // Touch?
+        if (browser.mobile) {
+            // Turn on touch mode.
+            $body.addClass("is-touch");
 
-        // Height fix (mostly for iOS).
-        window.setTimeout(function () {
-            $window.scrollTop($window.scrollTop() + 1);
-        }, 0);
-    }
+            // Height fix (mostly for iOS).
+            window.setTimeout(function () {
+                $window.scrollTop($window.scrollTop() + 1);
+            }, 0);
+        }
 
-    // Footer.
-    breakpoints.on("<=medium", function () {
-        $footer.insertAfter($main);
-    });
-
-    breakpoints.on(">medium", function () {
-        $footer.appendTo($header);
-    });
-
-    // Header.
-
-    // Parallax background.
-
-    // Disable parallax on IE (smooth scrolling is jerky), and on mobile platforms (= better performance).
-    if (browser.name == "ie" || browser.mobile) settings.parallax = false;
-
-    if (settings.parallax) {
+        // Footer.
         breakpoints.on("<=medium", function () {
-            $window.off("scroll.strata_parallax");
-            $header.css("background-position", "");
+            $footer.insertAfter($main);
         });
 
         breakpoints.on(">medium", function () {
-            $header.css("background-position", "left 0px");
+            $footer.appendTo($header);
+        });
 
-            $window.on("scroll.strata_parallax", function () {
-                $header.css(
-                    "background-position",
-                    "left " +
-                        -1 *
-                            (parseInt($window.scrollTop()) /
-                                settings.parallaxFactor) +
-                        "px",
-                );
+        // Header.
+
+        // Parallax background.
+
+        // Disable parallax on IE (smooth scrolling is jerky), and on mobile platforms (= better performance).
+        if (browser.name == "ie" || browser.mobile) settings.parallax = false;
+
+        if (settings.parallax) {
+            breakpoints.on("<=medium", function () {
+                $window.off("scroll.strata_parallax");
+                $header.css("background-position", "");
             });
-        });
 
-        $window.on("load", function () {
-            $window.triggerHandler("scroll");
-        });
-    }
+            breakpoints.on(">medium", function () {
+                $header.css("background-position", "left 0px");
 
-    // Main Sections: Two.
+                $window.on("scroll.strata_parallax", function () {
+                    $header.css(
+                        "background-position",
+                        "left " +
+                            -1 *
+                                (parseInt($window.scrollTop()) /
+                                    settings.parallaxFactor) +
+                            "px",
+                    );
+                });
+            });
 
-    // Lightbox gallery.
-    const deps = ["Curoid", "Edutracker", "Convo", "BlogApp", "WeatherCast"];
-    $window.on("load", function () {
+            $window.on("load", function () {
+                $window.triggerHandler("scroll");
+            });
+        }
+
+        // Main Sections: Three.
+
+        const deps = [
+            "Curoid",
+            "Edutracker",
+            "Convo",
+            "BlogApp",
+            "WeatherCast",
+            "ASCE",
+        ];
         $("#three").poptrox({
-            caption: function ($a) {
-                return (
+            caption: ($a) => {
+                const str =
                     $a.next("h3").text().trim() +
-                    "<a href=" +
-                    $a.next("h3").find("a")[0].href +
-                    " target='_blank' class='ml-2 icon brands fa-github'></a>" +
-                    `${
-                        deps.includes($a.next("h3").text().trim())
-                            ? "<a href=" +
-                              $a.next("h3").find("a")[1].href +
-                              " target='_blank' class='ml-2 icon brands fa-chrome'></a>"
-                            : ""
-                    }`
-                );
+                    ($a.next("h3").find("a").length == 2
+                        ? "<a href=" +
+                          $a.next("h3").find("a")[0].href +
+                          " target='_blank' class='ml-2 icon brands fa-github'></a>" +
+                          `${
+                              deps.includes($a.next("h3").text().trim())
+                                  ? "<a href=" +
+                                    $a.next("h3").find("a")[1].href +
+                                    " target='_blank' class='ml-2 icon brands fa-chrome'></a>"
+                                  : ""
+                          }`
+                        : "");
+
+                return str;
             },
             overlayColor: "#2c2c2c",
             overlayOpacity: 0.85,
@@ -135,7 +144,13 @@ function myFunction() {
             usePopupDefaultStyling: false,
             usePopupEasyClose: false,
             usePopupNav: true,
-            windowMargin: breakpoints.active("<=small") ? 0 : 50,
+            windowMargin: breakpoints
+                ? breakpoints.active("<=small")
+                    ? 0
+                    : 50
+                : 0,
         });
-    });
-})(jQuery);
+    })(jQuery);
+} catch (e) {
+    console.log(e);
+}
