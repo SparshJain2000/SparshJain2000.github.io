@@ -143,7 +143,11 @@ section,
     transition: background 0.3s ease-in-out, color 1s ease-in-out !important;
     display: block;
 }
-
+#two {
+    .row {
+        margin-left: -0.5em !important;
+    }
+}
 body {
     line-height: 1;
 }
@@ -430,6 +434,7 @@ $size: (
     }
 }
 .row {
+    margin-left: 0 !important;
     @include html-grid(2.5em);
     @include breakpoint("<=xlarge") {
         @include html-grid(2.5em, "xlarge");
@@ -1160,10 +1165,19 @@ input[type="submit"]:disabled {
 }
 
 .work-item {
-    margin: 0 0 2em 0;
+    margin: 0 0 2em 0 !important;
+    padding: 0rem;
     transition: 0.2s ease-in-out;
     background: transparent;
-
+    @media screen and (max-width: 736px) {
+        padding: 0rem !important;
+    }
+    &:nth-of-type(2n + 1) {
+        padding-right: 1rem;
+    }
+    &:nth-of-type(2n) {
+        padding-left: 1rem;
+    }
     .image {
         margin: 0 0 1.5em 0;
     }
@@ -1888,13 +1902,14 @@ footer ul {
     border-radius: 50%;
     z-index: 1000;
     transition: all 0.25s ease;
-}
-#themeToggler img {
-    width: 25px;
-    height: 25px;
-}
-#themeToggler i {
-    font-size: 1.2rem;
+
+    img {
+        width: 25px;
+        height: 25px;
+    }
+    i {
+        font-size: 1.2rem;
+    }
 }
 
 .btn {
@@ -1946,22 +1961,32 @@ section.visible {
     transform: none !important;
     visibility: visible !important;
 }
-#three .hideme:nth-of-type(2n + 1) {
-    opacity: 0;
-    transform: translateX(-5rem);
-    /* transform: translateY(30vh); */
-    visibility: hidden;
-    transition: opacity 0.6s ease-out, transform 1s ease-out !important;
-    will-change: opacity, visibility;
+
+#three {
+    .row {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+    .hideme {
+        &:nth-of-type(2n + 1) {
+            opacity: 0;
+            transform: translateX(-5rem);
+            /* transform: translateY(30vh); */
+            visibility: hidden;
+            transition: opacity 0.6s ease-out, transform 1s ease-out !important;
+            will-change: opacity, visibility;
+        }
+        &:nth-of-type(2n) {
+            opacity: 0;
+            transform: translateX(5rem);
+            /* transform: translateY(30vh); */
+            visibility: hidden;
+            transition: opacity 0.6s ease-out, transform 1s ease-out !important;
+            will-change: opacity, visibility;
+        }
+    }
 }
-#three .hideme:nth-of-type(2n) {
-    opacity: 0;
-    transform: translateX(5rem);
-    /* transform: translateY(30vh); */
-    visibility: hidden;
-    transition: opacity 0.6s ease-out, transform 1s ease-out !important;
-    will-change: opacity, visibility;
-}
+
 #five .hideme {
     opacity: 0;
     transform: translateX(-5rem);
@@ -1969,6 +1994,9 @@ section.visible {
     visibility: hidden;
     transition: opacity 0.6s ease-out, transform 1s ease-out !important;
     will-change: opacity, visibility;
+    &.container {
+        max-width: 100% !important;
+    }
 }
 
 .btn.btn-outline-light:hover {
