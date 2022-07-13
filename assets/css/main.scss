@@ -1986,7 +1986,11 @@ section.visible {
         }
     }
 }
-
+#four {
+    .row > * {
+        padding: 0 !important;
+    }
+}
 #five .hideme {
     opacity: 0;
     transform: translateX(-5rem);
