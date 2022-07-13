@@ -1212,7 +1212,7 @@ input[type="submit"]:disabled {
     color: rgba(255, 255, 255, 0.5);
     height: 100%;
     left: 0;
-    padding: 8em 4em;
+    padding: 8em 3em;
     position: fixed;
     text-align: right;
     top: 0;
@@ -1635,7 +1635,7 @@ body.is-touch .poptrox-popup .nav-previous {
 
 @media screen and (max-width: 1280px) {
     #header {
-        padding: 6em 0em 3em 3em;
+        padding: 6em 2em 3em 3em;
         width: 30%;
     }
     #header h1 {
@@ -1861,6 +1861,10 @@ body.is-touch .poptrox-popup .nav-previous {
 
 header .inner {
     background: 0 0;
+    .container {
+        margin-right: 0;
+        padding-right: 0;
+    }
 }
 
 header h1 {
