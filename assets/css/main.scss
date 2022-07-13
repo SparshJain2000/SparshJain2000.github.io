@@ -2065,32 +2065,20 @@ hr {
     background: linear-gradient(to right, var(--main) 50%, transparent 50%);
     background-size: 200% 100%;
     background-position: right bottom;
+    border-radius: 0.2rem;
     border: 1px solid gray;
     border-left: 4px solid var(--main);
-    border-radius: 0.2rem;
     transition: 0.3s ease-in-out;
 }
 .selectedHeader {
-    // box-shadow: inset 100px 0 0 0 var(--main);
-    // background: var(--main);
     background-position: left bottom;
-    border-color: transparent transparent transparent var(--main);
-
-    /* border: 0px;
-    */
-    // border-left: 4px solid transparent;
+    border-color: var(--main);
     h3,
     span {
         color: var(--gray1);
         transition: background 0.3s ease-in-out, color 0.6s ease-in-out !important;
     }
 }
-
-/* #themeToggler:hover,
-#themeToggler:active,
-#themeToggler:focus {
-    border: transparent;
-} */
 
 .shadow {
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3) !important;
