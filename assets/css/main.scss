@@ -25,7 +25,7 @@ html {
 }
 body {
     overflow-x: hidden;
-    background: var(--bg);
+    background: var(--bg) !important;
     transition: background 0.3s ease-in-out !important;
 }
 .flex-center {
