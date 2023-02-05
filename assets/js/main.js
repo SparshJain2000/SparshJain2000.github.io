@@ -154,3 +154,11 @@ try {
 } catch (e) {
     console.log(e);
 }
+const scrollContainer = document.querySelector(".work-container");
+
+scrollContainer.addEventListener("wheel", (evt) => {
+    if (window.screen.availWidth > 760) {
+        evt.preventDefault();
+        scrollContainer.scrollLeft += evt.deltaY;
+    }
+});
