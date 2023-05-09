@@ -61,14 +61,14 @@ anime
     .add({
         targets: ".ml10 .letter",
         scale: [0, 1],
-        duration: 1500,
+        duration: 800,
         elasticity: 600,
-        delay: (el, i) => 45 * (i + 1),
+        delay: (el, i) => 35 * (i + 1),
     })
     .add({
         targets: ".ml10",
         opacity: 0.8,
-        duration: 1000,
+        duration: 300,
         easing: "easeOutExpo",
-        delay: 200,
+        delay: 100,
     });
