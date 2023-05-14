@@ -10,12 +10,24 @@ $(document).ready(function () {
     /* Every time the window is scrolled ... */
     $("#one").addClass("hide");
     $("#two").addClass("hide");
+
+    // if ($(window).scrollTop() <= 0) $("#scrollTop").addClass("hideme");
+
     setTimeout(() => {
         $("#one").addClass("visible");
         $("#two").addClass("visible");
     }, 200);
     $(window).scroll(function () {
         /* Check the location of each desired element */
+
+        if ($(window).scrollTop() <= 900) {
+            // $("#scrollTop").removeClass("is-visible");
+            $("#scrollTop").addClass("hide");
+        } else {
+            $("#scrollTop").removeClass("hide");
+            $("#scrollTop").addClass("is-visible");
+        }
+
         $(".hideme").each(function (i) {
             var bottom_of_object = $(this).position().top;
             // $(this).position().top + $(this).outerHeight();
@@ -37,7 +49,9 @@ textWrapper.innerHTML = textWrapper.textContent.replace(
     /\S/g,
     "<span class='letter'>$&</span>",
 );
-
+function topFunction() {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+}
 anime
     .timeline({ loop: true })
     .add({

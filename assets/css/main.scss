@@ -1359,7 +1359,7 @@ input[type="submit"]:disabled {
 
 #main {
     margin-left: 35%;
-    padding: 8em 4em 4em 4em;
+    padding: 6em 4em 4em 4em;
     width: calc(100% - 35%);
     > section {
         border-top: solid 2px #cfcfcf;
@@ -1907,13 +1907,58 @@ footer ul {
     border-radius: 50%;
     z-index: 1000;
     transition: all 0.25s ease;
+    &:hover {
+        transform: translateY(-0.1rem);
+        box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5) !important;
+    }
 
+    &:active {
+        transform: translateY(0.4rem);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5) !important;
+    }
     img {
         width: 25px;
         height: 25px;
     }
+}
+.dark {
+    #themeToggler {
+        &:hover {
+            transform: translateY(-0.1rem);
+            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.9) !important;
+        }
+        &:active {
+            transform: translateY(0.4rem);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.9) !important;
+        }
+    }
+    #scrollTop {
+        background-color: #555 !important;
+    }
+}
+#scrollTop {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    z-index: 1000;
+    transition: all 0.25s ease;
+    background-color: rgb(255, 255, 255) !important;
+    &:hover {
+        transform: translateY(-0.1rem);
+        box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5) !important;
+    }
+
+    &:active {
+        transform: translateY(0.4rem);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5) !important;
+    }
+
     i {
         font-size: 1.2rem;
+        color: var(--highlight);
     }
 }
 
@@ -2100,11 +2145,15 @@ hr {
 .dark .shadow {
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.7) !important;
 }
-.btn-light {
-    background-color: #d3e6fd !important;
+
+.btn-dark {
+    background-color: #555 !important;
     border: transparent !important;
 }
-
+.btn-light {
+    background-color: #deecff !important;
+    border: transparent !important;
+}
 .glow-on-hover {
     /* width: 220px;
     height: 50px; */
@@ -2184,24 +2233,6 @@ hr {
     }
 }
 
-#themeToggler:hover {
-    transform: translateY(-0.1rem);
-    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5) !important;
-}
-
-#themeToggler:active {
-    transform: translateY(0.4rem);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5) !important;
-}
-.dark #themeToggler:hover {
-    transform: translateY(-0.1rem);
-    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.9) !important;
-}
-
-.dark #themeToggler:active {
-    transform: translateY(0.4rem);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.9) !important;
-}
 .ml10 {
     position: relative !important;
     background-color: transparent !important;
