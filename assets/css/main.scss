@@ -742,8 +742,8 @@ input[type="radio"] + label:before {
     }
     &.thumb {
         text-align: center;
-        background-color: white;
-        border: 0.02rem solid #ccc;
+        background-color: var(--background);
+        border: 0.02rem solid var(--background);
         padding: 1rem;
 
         @media screen and (min-width: 736px) {
@@ -796,9 +796,7 @@ input[type="radio"] + label:before {
 
         border-radius: 0.5em;
         display: block;
-        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
-            rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
-            rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+        box-shadow: var(--shadow);
 
         // box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
         //     rgba(0, 0, 0, 0.22) 0px 10px 10px;
@@ -1897,6 +1895,11 @@ body.is-touch .poptrox-popup .nav-previous {
     --text: var(--gray3);
     --border-color: var(--blue);
     --bg-solar: var(--yellow);
+
+    --background: #fff;
+    --shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+        rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+        rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
 .dark {
@@ -1906,6 +1909,10 @@ body.is-touch .poptrox-popup .nav-previous {
     --text: var(--gray1);
     --border-color: var(--purple);
     --bg-solar: var(--blue);
+    --background: var(--gray6);
+    // --shadow: rgba(255, 255, 255, 0.65) 0px 5px 15px;
+    --shadow: rgba(255, 255, 255, 0.32) 0px 2px 4px 0px,
+        rgba(255, 255, 255, 0.62) 0px 2px 16px 0px;
 }
 
 header .inner {
