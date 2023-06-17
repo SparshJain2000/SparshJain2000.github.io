@@ -2378,7 +2378,6 @@ hr {
         transition-duration: 0.3s;
         &:hover {
             transform: scale(1.15) !important;
-            // transform: scaley(1.08) !important;
             transition-duration: 0.15s;
 
             padding: 0.3rem 1.3rem !important;
@@ -2390,13 +2389,11 @@ hr {
             color: var(--highlight) !important;
             font-weight: 500;
 
-            // transform: scale(1.2) !important;
             transition-duration: 0.13s;
             transform: scale(1.15) !important;
 
             padding: 0.3rem 01rem !important;
-            // transform: scaley(1.08) !important;
-            border-bottom: 0.15rem solid var(--highlight);
+            border-bottom: 0.18rem solid var(--highlight);
             text-decoration: none;
         }
     }

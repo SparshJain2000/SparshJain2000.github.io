@@ -8,6 +8,7 @@ const toDark = (event) => {
     document.querySelector("meta[name='theme-color']").content = "#2a2e35";
     // document.querySelector("#theme").classList.remove("fa-sun");
     document.querySelector("#theme").src = "/images/moon.svg";
+    document.querySelector("#avatar").src = "/images/avatar_dark.PNG";
 
     // document.querySelector("#theme").classList.add("fa-moon");
     document.documentElement.setAttribute("data-theme", "dark");
@@ -21,6 +22,7 @@ const toLight = (event) => {
     // document.querySelector("#theme").classList.remove("fa-moon");
     // document.querySelector("#theme").classList.add("fa-sun");
     document.querySelector("#theme").src = "/images/sun.svg";
+    document.querySelector("#avatar").src = "/images/avatar.PNG";
 
     event.classList.add("btn-light");
     event.classList.remove("btn-secondary");

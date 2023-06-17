@@ -4,8 +4,27 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 window.onscroll = function () {
-    myFunction();
+    const sections = document.querySelectorAll("section");
+    const navLi = document.querySelectorAll("nav .nav .nav-item");
+    changeActiveStatus(sections, navLi);
+    updateProgress();
 };
+const changeActiveStatus = (sections, navLi) => {
+    var current = "";
+
+    sections.forEach((section) => {
+        const sectionTop = section.offsetTop;
+        if (pageYOffset >= sectionTop - 60)
+            current = section.getAttribute("id");
+    });
+
+    navLi.forEach((li) => {
+        li.classList.remove("active");
+        if (current !== "" && li.href.includes(current))
+            li.classList.add("active");
+    });
+};
+
 const scrollElementIntoView = (e, query) => {
     document
         .querySelectorAll("#sidebar ul li")
@@ -13,13 +32,22 @@ const scrollElementIntoView = (e, query) => {
     e.classList.add("active");
     document.querySelector(query).scrollIntoView({ behaviour: "smooth" });
 };
-function myFunction() {
+function updateProgress() {
     var winScroll =
         document.body.scrollTop || document.documentElement.scrollTop;
     var height =
         document.documentElement.scrollHeight -
         document.documentElement.clientHeight;
     var scrolled = (winScroll / height) * 100;
+    let container = document.querySelector(".progress-container");
+    if (scrolled >= 3) {
+        container.classList.add("visible");
+        container.classList.remove("none");
+    } else {
+        container.classList.remove("visible");
+        container.classList.add("none");
+    }
+
     document.getElementById("myBar").style.width = scrolled + "%";
 }
 try {
