@@ -13,14 +13,18 @@ html {
     --main-shadow: #00909e99;
     --main-light: #00909e1f;
     --highlight: #00bbf0;
+    --highlight-shadow: #00bbf088;
+    --input-box-shadow: rgba(0, 0, 0, 0.4);
     --header: #888;
 }
 [data-theme="dark"] {
     --main: #f37121;
     --main-shadow: #f3722199;
+    --input-box-shadow: rgba(255, 255, 255, 0.2);
 
     --main-light: #f371211f;
     --highlight: #ffb740;
+    --highlight-shadow: #ffb740;
     --header: #fff;
 }
 body {
@@ -497,7 +501,6 @@ label {
     display: block;
     font-size: 0.9em;
     font-weight: 400;
-    margin: 0 0 1em 0;
 }
 
 input[type="email"],
@@ -2094,8 +2097,11 @@ section.visible {
     }
 }
 #four {
-    .row > * {
+    .row {
         padding: 0 !important;
+    }
+    .row > * {
+        padding-left: 0;
     }
 }
 #five {
@@ -2433,5 +2439,66 @@ hr {
 
     100% {
         opacity: 0;
+    }
+}
+.mapouter {
+    position: relative;
+    text-align: right;
+    height: auto;
+    width: 100%;
+    @media screen and (min-width: 990px) {
+        margin: 4.5rem 0rem !important;
+        padding-left: 3rem !important;
+    }
+
+    margin: 2rem 0rem;
+}
+.gmap_canvas {
+    overflow: hidden;
+    background: none !important;
+    height: 100%;
+    width: 100%;
+    border-radius: 0.3rem;
+    box-shadow: var(--shadow);
+}
+.h-full {
+    height: 100%;
+}
+#four {
+    .row {
+        margin-right: 0px;
+    }
+    .btn-primary {
+        background-color: var(--main);
+        color: white;
+        border-color: var(--main);
+        box-shadow: var(--highlight-shadow) 2px 2px;
+        color: var(--gray0);
+        &:hover {
+            box-shadow: var(--highlight-shadow) 6px 6px;
+            color: white !important;
+            background-color: var(--main);
+            opacity: 0.9;
+        }
+    }
+    input,
+    textarea {
+        border-width: 0.03rem;
+        border-color: var(--gray2) !important;
+        background-color: var(--bg);
+        color: var(--text);
+        box-shadow: var(--input-box-shadow) 3px 3px;
+
+        &:focus {
+            box-shadow: var(--input-box-shadow) 6px 6px;
+        }
+    }
+    .input-group-text {
+        // .solid {
+        background-color: var(--highlight);
+        // }
+        .solid {
+            color: var(--bg);
+        }
     }
 }

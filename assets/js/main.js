@@ -190,3 +190,10 @@ scrollContainer.addEventListener("wheel", (evt) => {
         scrollContainer.scrollLeft += evt.deltaY;
     }
 });
+const mailTo = () => {
+    const name = document.querySelector("#name").value;
+    const email = document.querySelector("#email").value;
+    const message = document.querySelector("#message").value;
+    console.log(name, email, message);
+    window.location.href = `mailto:jainsparsh0801@gmail.com?subject=Feedback from ${name}&body=${message}%0A%0AThanks,%0A${name}`;
+};
