@@ -2502,3 +2502,14 @@ hr {
         }
     }
 }
+.nav-link {
+    .icon {
+        font-size: 1.1rem;
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+    .fa-phone {
+        display: inline-block;
+        transform: rotate(90deg);
+    }
+}
