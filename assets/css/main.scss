@@ -2455,7 +2455,7 @@ hr {
     border-bottom-right-radius: 01rem;
     box-shadow: var(--shadow-dark);
     .sidebar-container {
-        @media screen and (max-height: 750px) {
+        @media screen and (max-height: 500px) {
             height: 100%;
             justify-content: center;
             .logo {
