@@ -5,8 +5,8 @@ $(() => {
     function checkDirection() {
         console.log(touchendX - touchstartX);
         const diff = touchendX - touchstartX;
-        if (diff > 3) showSidebar();
-        else if (diff < -3) closeSidebar();
+        if (diff > 10) showSidebar();
+        else if (diff < -10) closeSidebar();
 
         // if (touchendX < touchstartX) console.log("swiped left!");
         // if (touchendX > touchstartX) console.log("swiped right!");
@@ -26,9 +26,11 @@ closeSidebar = () => {
     document.querySelector(".sidebar").classList.remove("show");
     document.querySelector(".sidebar").classList.add("hidden");
     document.querySelector(".overlay").classList.add("display-none");
+    // document.querySelector("#sidebarToggler").classList.remove("hidden");
 };
 showSidebar = () => {
     document.querySelector(".overlay").classList.remove("display-none");
     document.querySelector(".sidebar").classList.add("show");
     document.querySelector(".sidebar").classList.remove("hidden");
+    // document.querySelector("#sidebarToggler").classList.add("hidden");
 };
