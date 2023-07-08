@@ -41,6 +41,7 @@
 
 <body class="is-preload light">
     <!-- Header -->
+    <div class="display-none overlay"></div>
     <div id="loading">
         <div></div>
         <div></div>
@@ -81,6 +82,34 @@
                 <a class="nav-item nav-link" href="#four">
                     <i class="icon solid fa-phone mr-1 "></i>
                     Contact</a>
+            </div>
+        </nav>
+        <nav class="sidebar hidden">
+            <div class="sidebar-container">
+                <span class="close" onclick="closeSidebar()">
+                    <i class="icon solid fa-arrow-left "></i>
+                </span>
+
+                <div>
+                    <a class="nav-item nav-link" href="#one">
+                        <i class="icon solid fa-user "></i>
+                    </a>
+                    <a class="nav-item nav-link" href="#two">
+                        <i class="icon solid fa-briefcase "></i>
+                    </a>
+                    <a class="nav-item nav-link" href="#three">
+                        <i class="icon solid fa-code-branch "></i>
+                    </a>
+                    <a class="nav-item nav-link" href="#five">
+                        <i class="icon solid fa-cogs "></i>
+                    </a>
+                    <a class="nav-item nav-link" href="#four">
+                        <i class="icon solid fa-phone "></i>
+                    </a>
+                </div>
+                <a class="nav-item nav-link logo" href="#">
+                    <img src="/favicon-32x32.png" alt="">
+                </a>
             </div>
         </nav>
 
@@ -821,6 +850,7 @@
     <script src="assets/js/toggle.js"></script>
     <script src="assets/js/slidein.min.js"></script>
     <script src="assets/js/navState.min.js"></script>
+    <script src="assets/js/mobileFunctions.min.js"></script>
 
 </body>
 
