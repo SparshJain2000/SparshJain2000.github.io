@@ -9,13 +9,13 @@ $(function () {
 $(document).ready(function () {
     /* Every time the window is scrolled ... */
     $("#one").addClass("hide");
-    $("#two").addClass("hide");
+    // $("#two").addClass("hide");
 
     // if ($(window).scrollTop() <= 0) $("#scrollTop").addClass("hideme");
 
     setTimeout(() => {
         $("#one").addClass("visible");
-        $("#two").addClass("visible");
+        // $("#two").addClass("visible");
     }, 200);
     $(window).scroll(function () {
         /* Check the location of each desired element */
@@ -35,7 +35,7 @@ $(document).ready(function () {
 
             /* If the object is completely visible in the window, fade it it */
 
-            if (bottom_of_window > bottom_of_object + 60) {
+            if (bottom_of_window > bottom_of_object + 260) {
                 // $(this).animate({ opacity: "1", right: "0" }, 100);
                 // $(this).show("slide", { direction: "left" }, 1000);
                 $(this).addClass("is-visible");
@@ -45,10 +45,7 @@ $(document).ready(function () {
 });
 
 var textWrapper = document.querySelector(".ml10 .letters");
-textWrapper.innerHTML = textWrapper.textContent.replace(
-    /\S/g,
-    "<span class='letter'>$&</span>",
-);
+textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
 function topFunction() {
     window.scrollTo({ top: 0, behavior: "smooth" });
 }

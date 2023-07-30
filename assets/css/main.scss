@@ -1114,14 +1114,10 @@ input[type="submit"] {
     -webkit-appearance: none;
     -ms-appearance: none;
     appearance: none;
-    -moz-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out,
-        border-color 0.2s ease-in-out !important;
-    -webkit-transition: background-color 0.2s ease-in-out,
-        color 0.2s ease-in-out, border-color 0.2s ease-in-out !important;
-    -ms-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out,
-        border-color 0.2s ease-in-out !important;
-    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out,
-        border-color 0.2s ease-in-out !important;
+    -moz-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out !important;
+    -webkit-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out !important;
+    -ms-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out !important;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out !important;
     background-color: transparent;
     border-radius: 0.35em;
     border: solid 3px #efefef;
@@ -1901,9 +1897,8 @@ body.is-touch .poptrox-popup .nav-previous {
     --bg-solar: var(--yellow);
 
     --background: #fff;
-    --shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
-        rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
-        rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    --shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px,
+        rgba(0, 0, 0, 0.09) 0px -3px 5px;
 
     // --shadow-md: rgba(0, 0, 0, 0.5) 0px 19px 38px,
     //     rgba(0, 0, 0, 0.42) 0px 15px 12px;
@@ -1922,12 +1917,10 @@ body.is-touch .poptrox-popup .nav-previous {
     --bg-solar: var(--blue);
     --background: var(--gray6);
     // --shadow: rgba(255, 255, 255, 0.65) 0px 5px 15px;
-    --shadow: rgba(255, 255, 255, 0.32) 0px 2px 4px 0px,
-        rgba(255, 255, 255, 0.62) 0px 2px 16px 0px;
+    --shadow: rgba(255, 255, 255, 0.32) 0px 2px 4px 0px, rgba(255, 255, 255, 0.62) 0px 2px 16px 0px;
     // --shadow-md: rgba(0, 0, 0, 0.4) 0px 19px 38px,
     //     rgba(0, 0, 0, 0.32) 0px 15px 12px;
-    --shadow-md: rgba(0, 0, 0, 0.25) 0px 14px 28px,
-        rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    --shadow-md: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
     --shadow-dark: rgba(255, 255, 255, 0.4) 0px 0.5rem 1rem !important;
     --overlay: rgba(0, 0, 0, 0.5);
 }
@@ -2065,7 +2058,35 @@ section.visible {
     transform: none !important;
     visibility: visible !important;
 }
-
+#two {
+    .hideme {
+        &:nth-of-type(2n + 1) {
+            opacity: 0;
+            transform: translateX(5rem);
+            /* transform: translateY(30vh); */
+            visibility: hidden;
+            transition: opacity 0.6s ease-out, transform 1s ease-out !important;
+            will-change: opacity, visibility;
+        }
+        &:nth-of-type(2n) {
+            opacity: 0;
+            transform: translateX(-5rem);
+            /* transform: translateY(30vh); */
+            visibility: hidden;
+            transition: opacity 0.6s ease-out, transform 1s ease-out !important;
+            will-change: opacity, visibility;
+        }
+        @media screen and (min-width: 736px) {
+            opacity: 1 !important;
+            &:nth-of-type(2n + 1) {
+                opacity: 1 !important;
+            }
+            &:nth-of-type(2n) {
+                opacity: 1 !important;
+            }
+        }
+    }
+}
 #three {
     .row {
         margin-left: 0 !important;
@@ -2247,18 +2268,7 @@ hr {
 
 .glow-on-hover:before {
     content: "";
-    background: linear-gradient(
-        45deg,
-        #ff0000,
-        #ff7300,
-        #fffb00,
-        #48ff00,
-        #00ffd5,
-        #002bff,
-        #7a00ff,
-        #ff00c8,
-        #ff0000
-    );
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
     position: absolute;
     top: -2px;
     left: -2px;
@@ -2360,25 +2370,16 @@ hr {
 }
 @keyframes rotate {
     0% {
-        transform: rotate(-180deg);
+        transform: rotate(0deg);
     }
     50% {
         transform: rotate(-90deg);
     }
     100% {
-        transform: rotate(0deg);
+        transform: rotate(-180deg);
     }
 }
 @keyframes rotate-counter-clock {
-    // 25% {
-    //     transform: rotate(22deg);
-    // }
-    // 50% {
-    //     transform: rotate(45deg);
-    // }
-    // 75% {
-    //     transform: rotate(67deg);
-    // }
     0% {
         transform: rotate(180deg);
     }
@@ -2388,10 +2389,16 @@ hr {
 }
 #sidebarToggler {
     background-color: transparent;
-    animation: rotate 0.5s;
-
+    animation: rotate-counter-clock 0.5s;
+    &:active,
+    &:focus {
+        outline: none;
+    }
     &.hidden {
         animation: rotate 0.5s;
+        visibility: hidden;
+        // transition: all 0.5s ease-in-out;
+        // background-color: white;
     }
     // background-color: rgb(58, 58, 58);
     // background-color: var(--highlight);
@@ -2401,10 +2408,11 @@ hr {
     }
     padding: 1rem;
     top: 0px;
-    left: 0px;
+    left: 5px;
     // width: 45px;
     // height: 45px;
     border-radius: 50%;
+    border-width: 0;
     border-color: transparent;
     z-index: 1000;
     transition: all 0.25s ease;

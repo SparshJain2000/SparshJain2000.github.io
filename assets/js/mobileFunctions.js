@@ -26,11 +26,11 @@ closeSidebar = () => {
     document.querySelector(".sidebar").classList.remove("show");
     document.querySelector(".sidebar").classList.add("hidden");
     document.querySelector(".overlay").classList.add("display-none");
-    // document.querySelector("#sidebarToggler").classList.remove("hidden");
+    document.querySelector("#sidebarToggler").classList.remove("hidden");
 };
 showSidebar = () => {
     document.querySelector(".overlay").classList.remove("display-none");
     document.querySelector(".sidebar").classList.add("show");
     document.querySelector(".sidebar").classList.remove("hidden");
-    // document.querySelector("#sidebarToggler").classList.add("hidden");
+    document.querySelector("#sidebarToggler").classList.add("hidden");
 };
