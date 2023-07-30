@@ -35,7 +35,7 @@ $(document).ready(function () {
 
             /* If the object is completely visible in the window, fade it it */
 
-            if (bottom_of_window > bottom_of_object + 260) {
+            if (bottom_of_window > bottom_of_object + 160) {
                 // $(this).animate({ opacity: "1", right: "0" }, 100);
                 // $(this).show("slide", { direction: "left" }, 1000);
                 $(this).addClass("is-visible");

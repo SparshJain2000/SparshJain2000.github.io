@@ -5,8 +5,8 @@ $(() => {
     function checkDirection() {
         console.log(touchendX - touchstartX);
         const diff = touchendX - touchstartX;
-        if (diff > 30) showSidebar();
-        else if (diff < -30) closeSidebar();
+        if (diff > 100) showSidebar();
+        else if (diff < -50) closeSidebar();
 
         // if (touchendX < touchstartX) console.log("swiped left!");
         // if (touchendX > touchstartX) console.log("swiped right!");
