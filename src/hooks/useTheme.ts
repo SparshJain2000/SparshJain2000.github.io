@@ -11,5 +11,6 @@ export function useTheme(initialValue?: string) {
         localStorage.setItem("theme", JSON.stringify(newTheme));
         setTheme(newTheme);
     };
-    return { theme, toggleTheme };
+
+    return [theme, toggleTheme] as const;
 }

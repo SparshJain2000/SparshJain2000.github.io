@@ -1,9 +1,13 @@
 import { TypeAnimation } from "react-type-animation";
 import avatar from "../images/avatar.png";
+import avatar_dark from "../images/avatar_dark.png";
 
 import resume from "../assets/resume.pdf";
 import Footer from "./Footer.component";
-const Header = () => {
+import withTheme from "./HOC/ThemeProvider";
+import { WithThemeProp } from "../types/customTypes";
+// import { ThemeContext } from "../App";
+const Header = ({ theme }: WithThemeProp) => {
     return (
         <header id='header'>
             <div style={{ height: "fit-content" }}>
@@ -16,7 +20,7 @@ const Header = () => {
                             <img
                                 loading='lazy'
                                 id='avatar'
-                                src={avatar}
+                                src={theme === "dark" ? avatar_dark : avatar}
                                 alt='avatar'
                                 // style='background: transparent'
                             />
@@ -54,4 +58,4 @@ const Header = () => {
     );
 };
 
-export default Header;
+export default withTheme(Header);

@@ -1,11 +1,7 @@
-import React, { ReactNode, useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useScroll } from "../hooks/useScroll";
-export interface WorkCardProp {
-    title: string;
-    link: ReactNode;
-    description: ReactNode[];
-    duration: string;
-}
+import { WorkCardProp } from "../types/customTypes";
+
 const WorkCard = ({ title, link, description, duration }: WorkCardProp) => {
     const element = useRef<HTMLDivElement>(null);
     const { scrollY } = useScroll();
