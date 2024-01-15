@@ -1,0 +1,217 @@
+#two {
+    .hideme {
+        &:nth-of-type(2n + 1) {
+            opacity: 0;
+            transform: translateX(5rem);
+            /* transform: translateY(30vh); */
+            // visibility: hidden;
+            transition: opacity 0.6s ease-out, transform 1s ease-out !important;
+            will-change: opacity, visibility;
+        }
+        &:nth-of-type(2n) {
+            opacity: 0;
+            transform: translateX(-5rem);
+            /* transform: translateY(30vh); */
+            // visibility: hidden;
+            transition: opacity 0.6s ease-out, transform 1s ease-out !important;
+            will-change: opacity, visibility;
+        }
+        @media screen and (min-width: 736px) {
+            opacity: 1 !important;
+            &:nth-of-type(2n + 1) {
+                opacity: 1 !important;
+            }
+            &:nth-of-type(2n) {
+                opacity: 1 !important;
+            }
+        }
+    }
+    .timeline {
+        @include themed() {
+            // color: t("text") !important;
+            // background: t("bg") !important;
+            // background: t("main-light");
+        }
+        margin: 20px auto;
+        padding: 20px;
+        /* Card container */
+        .timeline-card {
+            position: relative;
+            max-width: 100%;
+            margin: 0px auto;
+
+            /* setting padding based on even or odd */
+            &:nth-child(odd) {
+                padding: 30px 0 30px 30px !important;
+                @media screen and (max-width: 736px) {
+                    .info {
+                        div,
+                        ul {
+                            padding-left: 1.5em;
+                            padding-right: 0px !important;
+                        }
+                    }
+                }
+                .title {
+                    flex-direction: row;
+                }
+                /* Setting the border of top, bottom, left */
+                &::before {
+                    left: 0px;
+                    top: -4.5px;
+                    bottom: -4.5px;
+                    border-width: 5px 0 5px 5px !important;
+                    border-radius: 50px 0 0 50px;
+                }
+            }
+            &:nth-child(even) {
+                @media screen and (max-width: 736px) {
+                    .info {
+                        div,
+                        ul {
+                            padding-left: 0px !important;
+                            padding-right: 0.5em;
+                        }
+                    }
+                }
+                .title {
+                    flex-direction: row-reverse;
+                }
+                padding: 30px 30px 30px 0;
+                text-align: right;
+                /* Setting the border of top, bottom, right */
+                &::before {
+                    right: 0;
+                    top: 0;
+                    bottom: 0;
+                    border-width: 5px 5px 5px 0 !important;
+                    border-radius: 0 50px 50px 0;
+                }
+            }
+
+            /* Global ::before */
+            &::before {
+                content: "";
+                position: absolute;
+                width: 50%;
+                @include themed() {
+                    border: solid t("main");
+                }
+            }
+
+            /* Removing the border if it is the first card */
+            &:first-child::before {
+                border-top: 0;
+                border-top-left-radius: 0;
+            }
+
+            /* Removing the border if it is the last card  and it's odd */
+            &:last-child:nth-child(odd)::before {
+                border-bottom: 0;
+                border-bottom-left-radius: 0;
+            }
+
+            /* Removing the border if it is the last card  and it's even */
+            &:last-child:nth-child(even)::before {
+                border-bottom: 0;
+                border-bottom-right-radius: 0;
+            }
+
+            /* Information about the timeline */
+            .info {
+                display: flex;
+                flex-direction: column;
+                /* background: #333; */
+                @include themed() {
+                    background: t("main-light");
+                    color: t("header");
+                    box-shadow: t("shadow-md");
+                }
+                border-radius: 10px;
+                padding: 10px;
+                p,
+                div {
+                    padding-left: 15px;
+                    padding-right: 15px;
+
+                    font-size: 1em;
+                    // li {
+                    //     font-size: 1em;
+                    font-family: "Open Sans";
+                    // }
+                    @media screen and (max-width: 736px) {
+                        font-size: 0.7em !important;
+
+                        // li {
+                        //     font-size: 0.8em !important;
+                        //     font-family: "Open Sans";
+                        // }
+                    }
+                }
+                .title {
+                    font-weight: 500;
+                    display: flex;
+                    justify-content: space-between;
+                    @include themed() {
+                        color: t("main") !important;
+                    }
+                    position: relative;
+                    padding: 15px;
+                    margin: 0 !important;
+                    @media screen and (max-width: 736px) {
+                        flex-direction: column;
+                    }
+                    /* padding-right: 15px; */
+                    .duration {
+                        font-size: 0.8em;
+                        font-style: italic;
+                        font-weight: 400;
+                        // font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+                    }
+                    a {
+                        @include themed() {
+                            color: t("highlight") !important;
+                        }
+                        &:hover {
+                            @include themed() {
+                                color: t("main") !important;
+                            }
+                            text-decoration: underline !important;
+                        }
+                    }
+                    /* Timeline dot  */
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        width: 1.8rem;
+                        height: 1.8rem;
+                        @include themed() {
+                            background: t("bg") !important;
+                            border: 3px solid t("main");
+                        }
+                        border-radius: 999px;
+                        opacity: 1 !important;
+                        transform: none !important;
+                        visibility: visible !important;
+                    }
+                }
+            }
+            /* Title of the card */
+
+            /* text right if the card is even  */
+            &:nth-child(even) > .info > .title {
+                text-align: right;
+            }
+
+            /* setting dot to the left if the card is odd */
+            &:nth-child(odd) > .info > .title::before {
+                left: -51px;
+            }
+
+            /* setting dot to the right if the card is odd */
+            &:nth-child(even) > .info > .title::before {
+                right: -51px;
+            }
+        }
+    }
+}

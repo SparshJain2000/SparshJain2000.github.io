@@ -1,0 +1,107 @@
+#footer {
+    .copyright,
+    .icons,
+    .inner,
+    li,
+    ul {
+        background: 0 0 !important;
+    }
+    .icons {
+        display: flex;
+        flex-direction: row;
+        justify-content: end;
+        margin: 1em 0 0 0;
+        a {
+            color: rgba(255, 255, 255, 0.4);
+        }
+        a:hover {
+            @include themed() {
+                color: t("highlight") !important;
+            }
+        }
+    }
+    .copyright {
+        color: rgba(255, 255, 255, 0.4);
+        font-size: 1.2em;
+        list-style: none;
+        margin: 0.7em 0 0 0;
+        padding: 0;
+        li {
+            border-left: solid 1px rgba(255, 255, 255, 0.25);
+            display: inline-block;
+            line-height: 1em;
+            margin-left: 0.75em;
+            padding-left: 0.75em;
+            &:first-child {
+                border-left: 0;
+                margin-left: 0;
+                padding-left: 0;
+            }
+            a {
+                color: inherit;
+            }
+        }
+    }
+    @media screen and (max-width: 1280px) {
+        .copyright li {
+            border-left-width: 0;
+            display: block;
+            line-height: 2.25em;
+            margin-left: 0;
+            padding-left: 0;
+        }
+    }
+
+    @media screen and (max-width: 980px) {
+        background-attachment: scroll !important;
+        background-color: #1f1815;
+        background-image: url("../assets/images/overlay.png"), url("../assets/images/bg2.jpg");
+
+        background-position: top left, bottom center;
+        background-repeat: repeat, no-repeat;
+        background-size: auto, cover;
+        bottom: auto;
+        left: auto;
+        padding: 4em;
+        position: relative;
+        text-align: center;
+        // width: 100% !important;
+
+        .icons {
+            justify-content: center;
+            margin: 0 0 1em 0;
+            font-size: 1.3rem;
+        }
+        .copyright {
+            margin: 0 0 1em 0;
+        }
+        .copyright li {
+            border-left-width: 1px;
+            display: inline-block;
+            line-height: 1em;
+            margin-left: 0.75em;
+            padding-left: 0.75em;
+        }
+    }
+    @media screen and (max-width: 736px) {
+        padding: 2.25em 1.5em;
+    }
+
+    @media screen and (max-width: 480px) {
+        padding: 1.5em 1em;
+
+        .copyright li {
+            border-left-width: 0;
+            display: block;
+            line-height: 2.25em;
+            margin-left: 0;
+            padding-left: 0;
+        }
+        .icons {
+            margin: 0 0 0.5em 0;
+        }
+        .copyright {
+            margin: 0 0 0.5em 0;
+        }
+    }
+}

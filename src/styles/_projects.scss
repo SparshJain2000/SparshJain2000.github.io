@@ -1,0 +1,33 @@
+.work-item {
+    margin: 0 0 2em 0 !important;
+    padding: 0rem;
+    transition: 0.2s ease-in-out;
+    background: transparent;
+    @media screen and (max-width: 736px) {
+        padding: 0rem !important;
+    }
+
+    &:hover {
+        transform: scale(1.1) !important;
+        z-index: 1000;
+    }
+    .image {
+        margin: 0 0 1.5em 0;
+    }
+
+    h3 {
+        font-size: 1em;
+        margin: 0 0 0.5em 0;
+        font-weight: 500;
+    }
+
+    p {
+        font-size: 0.8em;
+        line-height: 1.5em;
+        margin: 0;
+    }
+
+    &:hover {
+        z-index: 100;
+    }
+}
