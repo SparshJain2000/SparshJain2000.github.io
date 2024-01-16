@@ -1,7 +1,7 @@
 import React from "react";
 
-const Skils = () => {
-    return <div>Skils</div>;
+const Skills = () => {
+    return <div>Skills</div>;
 };
 
-export default Skils;
+export default Skills;

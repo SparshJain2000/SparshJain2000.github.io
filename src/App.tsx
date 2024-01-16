@@ -10,6 +10,7 @@ import moon from "./images/moon.svg";
 import { useTheme } from "./hooks/useTheme";
 import Header from "./components/Header.component";
 import { createContext } from "react";
+import Skills from "./components/Skills.component";
 
 // const oppositeTheme = (theme: string) => {
 //     return theme === "dark" ? "light" : "dark";
@@ -32,6 +33,7 @@ function App() {
                             <Intro></Intro>
                             <Work></Work>
                             <Projects></Projects>
+                            <Skills></Skills>
                             <Contact></Contact>
                         </div>
                         <div className='bottom-footer'>

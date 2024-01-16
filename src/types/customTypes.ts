@@ -6,6 +6,13 @@ export interface WorkCardProp {
     description: ReactNode[];
     duration: string;
 }
+export interface ProjectCardProp {
+    title: string;
+    deployed: string | null;
+    description: string;
+    github: string;
+    image: string;
+}
 
 export interface WithThemeProp {
     theme: string;

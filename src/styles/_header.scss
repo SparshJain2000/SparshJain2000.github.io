@@ -84,6 +84,9 @@ header {
     &.major {
         h2 {
             font-size: 2em;
+            @media screen and (max-width: 736px) {
+                font-size: 1.2em;
+            }
         }
     }
 }
@@ -209,15 +212,7 @@ header {
             font-size: 1.35em;
         }
     }
-    @media screen and (max-width: 736px) {
-        &.major h2 {
-            font-size: 1.35em;
-        }
-        padding: 2.25em 1.5em;
-        h1 {
-            font-size: 1.35em;
-        }
-    }
+
     @media screen and (max-width: 480px) {
         padding: 4.5em 1.5em;
         h1 br {

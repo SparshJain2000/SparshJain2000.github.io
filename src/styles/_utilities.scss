@@ -1,6 +1,29 @@
 .ml-1 {
     margin-left: 0.25rem !important;
 }
+.mr-3,
+.mx-3 {
+    margin-right: 1rem !important;
+}
+.mr-1,
+.mx-1 {
+    margin-right: 0.25rem !important;
+}
+.row {
+    > * {
+        box-sizing: border-box;
+    }
+    > .col-12 {
+        width: 100%;
+    }
+    @media (min-width: 768px) {
+        .col-md-11 {
+            -ms-flex: 0 0 91.666667%;
+            flex: 0 0 91.666667%;
+            max-width: 91.666667%;
+        }
+    }
+}
 .align-left {
     text-align: left;
 }
@@ -11,6 +34,12 @@
 
 .align-right {
     text-align: right;
+}
+.float-right {
+    float: right !important;
+}
+.float-left {
+    float: left !important;
 }
 .flex-center {
     display: flex !important;
