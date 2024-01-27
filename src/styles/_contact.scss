@@ -1,0 +1,94 @@
+#four {
+    .row {
+        margin-right: 0px;
+        margin-left: 0 !important;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+        align-items: stretch;
+    }
+    .btn-primary {
+        color: white;
+        @include themed() {
+            // background: t("bg") !important;
+            background-color: t("main");
+            border-color: t("main");
+            color: $gray0;
+            box-shadow: t("highlight-shadow") 2px 2px;
+        }
+        &:hover {
+            @include themed() {
+                box-shadow: t("highlight-shadow") 6px 6px;
+                background-color: t("main");
+            }
+            color: white !important;
+            opacity: 0.9;
+        }
+    }
+    input,
+    textarea {
+        border-width: 0.03rem;
+        @include themed() {
+            border-color: $gray2 !important;
+            background-color: t("bg");
+            color: t("text");
+            box-shadow: t("input-box-shadow") 3px 3px;
+        }
+
+        &:focus {
+            @include themed() {
+                box-shadow: t("highlight-shadow") 6px 6px;
+            }
+        }
+    }
+    .input-group-text {
+        // .solid {
+        @include themed() {
+            background-color: t("highlight");
+        }
+        // }
+        .solid {
+            @include themed() {
+                color: t(bg);
+            }
+        }
+    }
+}
+
+.gmap_canvas {
+    overflow: hidden;
+    background: none !important;
+    height: 100%;
+    width: 100%;
+    border-radius: 0.3rem;
+    @include themed() {
+        -webkit-box-shadow: t("shadow");
+        box-shadow: t("shadow");
+    }
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    background-color: transparent;
+}
+
+.mapouter {
+    position: relative;
+    text-align: right;
+    height: auto;
+    width: 100%;
+    @media screen and (min-width: 990px) {
+        margin: 4.5rem 0rem !important;
+        padding-left: 3rem !important;
+    }
+
+    margin: 2rem 0rem;
+}
