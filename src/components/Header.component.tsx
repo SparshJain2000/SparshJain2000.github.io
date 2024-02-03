@@ -1,11 +1,13 @@
 import { TypeAnimation } from "react-type-animation";
-import avatar from "../images/avatar.png";
-import avatar_dark from "../images/avatar_dark.png";
+// import avatar from "../images/avatar.png";
+// import avatar_dark from "../images/avatar_dark.png";
 
 import resume from "../assets/resume.pdf";
 import Footer from "./Footer.component";
 import withTheme from "./HOC/ThemeProvider";
 import { WithThemeProp } from "../types/customTypes";
+import Image from "./Image.component";
+
 // import { ThemeContext } from "../App";
 const Header = ({ theme }: WithThemeProp) => {
     return (
@@ -16,14 +18,15 @@ const Header = ({ theme }: WithThemeProp) => {
                         className='container'
                         // style='background-color: transparent'
                     >
-                        <a className='image avatar'>
-                            <img
+                        <a className='image avatar flex-center'>
+                            {/* <img
                                 loading='lazy'
                                 id='avatar'
                                 src={theme === "dark" ? avatar_dark : avatar}
                                 alt='avatar'
                                 // style='background: transparent'
-                            />
+                            /> */}
+                            <Image src={theme === "dark" ? "avatar_dark.png" : "avatar.png"} loader='lg' />
                         </a>
 
                         <h1>
