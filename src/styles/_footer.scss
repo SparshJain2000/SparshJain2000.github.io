@@ -13,11 +13,13 @@
         margin: 1em 0 0 0;
         a {
             color: rgba(255, 255, 255, 0.4);
+            transition: color 0.2s ease-in-out;
         }
         a:hover {
             @include themed() {
                 color: t("highlight") !important;
             }
+            transition: color 0.2s ease-in-out;
         }
     }
     .copyright {
@@ -55,7 +57,7 @@
     @media screen and (max-width: 980px) {
         background-attachment: scroll !important;
         background-color: #1f1815;
-        background-image: url("../assets/images/overlay.png"), url("../assets/images/bg2.jpg");
+        background-image: url("../assets/images/overlay.webp"), url("../assets/images/bg2.webp");
 
         background-position: top left, bottom center;
         background-repeat: repeat, no-repeat;

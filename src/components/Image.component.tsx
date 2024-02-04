@@ -21,7 +21,7 @@ const Image = ({ src, loader, ...props }: { src: string; loader?: string; classN
     const element = useRef<HTMLImageElement>(null);
 
     useEffect(() => {
-        console.log(element.current);
+        // console.log(element.current);
         element?.current?.addEventListener(
             "load",
             () => {

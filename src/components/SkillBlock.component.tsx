@@ -5,8 +5,8 @@ import { JsxElement } from "typescript";
 const SkillBlock = ({ title, children, icon }: { title: string; children: ReactElement; icon: string }) => {
     const [show, setShow] = useState(false);
     const element = useRef<HTMLDivElement>(null);
-    const child = useRef<HTMLDivElement>(null);
     const [visible] = useVisible(element);
+    const child = useRef<HTMLDivElement>(null);
     const [childVisible] = useVisible(child);
     return (
         <>

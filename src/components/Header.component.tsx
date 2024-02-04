@@ -18,7 +18,7 @@ const Header = ({ theme }: WithThemeProp) => {
                         className='container'
                         // style='background-color: transparent'
                     >
-                        <a className='image avatar flex-center'>
+                        <div className='image avatar flex-center cursor-pointer'>
                             {/* <img
                                 loading='lazy'
                                 id='avatar'
@@ -26,8 +26,8 @@ const Header = ({ theme }: WithThemeProp) => {
                                 alt='avatar'
                                 // style='background: transparent'
                             /> */}
-                            <Image src={theme === "dark" ? "avatar_dark.png" : "avatar.png"} loader='lg' />
-                        </a>
+                            <Image src={theme === "dark" ? "avatar_dark.webp" : "avatar.webp"} loader='lg' />
+                        </div>
 
                         <h1>
                             <span className='ml10'>

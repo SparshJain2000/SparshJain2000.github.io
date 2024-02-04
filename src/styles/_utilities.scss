@@ -95,7 +95,7 @@
 .col-12 {
     -ms-flex: 0 0 100%;
     flex: 0 0 100%;
-    max-width: 100%;
+    max-width: 100% !important;
 }
 .row {
     display: flex;
@@ -294,8 +294,6 @@ hr.major {
             img {
                 transform: scale(1.02);
                 transition: all 0.3s ease-in-out;
-
-                // background: url(images/overlay.png), url(images/overlay.png) !important;
             }
         }
         &:hover:after {
@@ -303,7 +301,7 @@ hr.major {
             z-index: 3;
         }
         &:hover:before {
-            background: url(../assets/images/overlay.png), url(../assets/images/overlay.png);
+            background: url(../assets/images/overlay.webp), url(../assets/images/overlay.webp);
             opacity: 1;
             z-index: 2;
         }
@@ -713,4 +711,8 @@ textarea {
 }
 .z-100 {
     z-index: 100;
+}
+
+.cursor-pointer {
+    cursor: pointer;
 }

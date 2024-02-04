@@ -17,4 +17,9 @@ section:first-child {
 }
 #one {
     text-wrap: wrap;
+    @media (min-width: 768px) {
+        .major {
+            margin-top: 3rem !important;
+        }
+    }
 }

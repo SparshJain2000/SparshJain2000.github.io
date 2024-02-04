@@ -40,6 +40,7 @@ const Contact = () => {
                 <div className='col-12 col-lg-7 mapouter'>
                     <div className='gmap_canvas'>
                         <iframe
+                            title='Map'
                             width='100%'
                             height='100%'
                             id='gmap_canvas'

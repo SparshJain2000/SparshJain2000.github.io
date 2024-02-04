@@ -9,7 +9,7 @@ const Skills = () => {
                 <h2>My Skills</h2>
             </header>
             <div className='container px-0'>
-                <SkillBlock title={"Front-end Web Development"} icon='fab fa-js'>
+                <SkillBlock title={"Front-End Web Development"} icon='fab fa-js'>
                     <>
                         <div className='card col-12-large col-12-small my-4 skill' style={{ borderRadius: "0.4rem" }}>
                             <h3 className='card-title pl-3 my-1 mx-1'>HTML</h3>
@@ -79,7 +79,7 @@ const Skills = () => {
                         </div>
                     </>
                 </SkillBlock>
-                <SkillBlock title={"Back-end Web Development"} icon='fa fa-cogs'>
+                <SkillBlock title={"Back-End Web Development"} icon='fa fa-cogs'>
                     <>
                         <div className='card col-12-large col-12-small my-4 skill' style={{ borderRadius: "0.4rem" }}>
                             <h3 className='card-title pl-3 m-1'>Backend</h3>
@@ -176,7 +176,7 @@ const Skills = () => {
                         </div>
                     </>
                 </SkillBlock>
-                <SkillBlock title={"languages"} icon='fa fa-laptop-code'>
+                <SkillBlock title={"Languages"} icon='fa fa-laptop-code'>
                     <div className='card col-12-large col-12-small my-4 skill' style={{ borderRadius: "0.4rem" }}>
                         <h3 className='card-title pl-3 m-1'>Languages</h3>
                         <hr className='mb-2 mt-0 hr-purple' />
