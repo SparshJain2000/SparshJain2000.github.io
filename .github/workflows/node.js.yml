@@ -32,6 +32,8 @@ jobs:
       
     - name: Build
       run: npm run build --verbose
+      env:
+       CI: false
       
     - name: Deploy
       run: |
