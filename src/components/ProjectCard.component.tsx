@@ -1,4 +1,5 @@
-import React, { useEffect, useRef, useState } from "react";
+/* eslint-disable jsx-a11y/anchor-has-content */
+import { useEffect, useRef, useState } from "react";
 import { ProjectCardProp } from "../types/customTypes";
 import { useVisible } from "../hooks/useVisible";
 import Loader from "./Loader.component";

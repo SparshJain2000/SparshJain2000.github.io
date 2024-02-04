@@ -1,5 +1,4 @@
-import { useEffect, useRef, useState } from "react";
-import { useScroll } from "../hooks/useScroll";
+import { useRef } from "react";
 import { WorkCardProp } from "../types/customTypes";
 import { useVisible } from "../hooks/useVisible";
 

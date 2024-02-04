@@ -1,6 +1,5 @@
-import React, { ReactElement, useRef, useState } from "react";
+import { ReactElement, useRef, useState } from "react";
 import { useVisible } from "../hooks/useVisible";
-import { JsxElement } from "typescript";
 
 const SkillBlock = ({ title, children, icon }: { title: string; children: ReactElement; icon: string }) => {
     const [show, setShow] = useState(false);

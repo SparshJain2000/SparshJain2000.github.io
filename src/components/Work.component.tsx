@@ -1,5 +1,3 @@
-import React, { useEffect, useRef } from "react";
-import { useScroll } from "../hooks/useScroll";
 import WorkCard from "./WorkCard.component";
 
 const Work = () => {
