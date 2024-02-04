@@ -1,0 +1,25 @@
+section {
+    border-top: solid 2px #cfcfcf;
+    margin: 4em 0 0 0;
+    padding: 4em 0 0 0;
+}
+
+section:first-child {
+    border-top: 0;
+    margin-top: 0;
+    padding-top: 0;
+}
+
+.col-text {
+    @include themed() {
+        color: t("text") !important;
+    }
+}
+#one {
+    text-wrap: wrap;
+    @media (min-width: 768px) {
+        .major {
+            margin-top: 3rem !important;
+        }
+    }
+}

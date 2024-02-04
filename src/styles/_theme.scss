@@ -1,0 +1,83 @@
+// @import "./variables";
+$themes: (
+    default: (
+        main: $main,
+        main-shadow: $main-shadow,
+        main-light: $main-light,
+        highlight: $highlight,
+        highlight-shadow: $highlight-shadow,
+        input-box-shadow: $input-box-shadow,
+        header: $header,
+        bg: $gray0,
+        bg-nav: linear-gradient(to right, $gray1, $gray3),
+        bg-dropdown: $gray0,
+        text: $gray3,
+        border-color: $blue,
+        bg-solar: $yellow,
+        background: #fff,
+        shadow: (
+            rgba(0, 0, 0, 0.25) 0px 54px 55px,
+            rgba(0, 0, 0, 0.12) 0px -12px 30px,
+            rgba(0, 0, 0, 0.12) 0px 4px 6px,
+            rgba(0, 0, 0, 0.17) 0px 12px 13px,
+            rgba(0, 0, 0, 0.09) 0px -3px 5px,
+        ),
+        shadow-md: (
+            rgba(0, 0, 0, 0.5) 0px 0.5rem 1rem,
+        ),
+        shadow-dark: (
+            rgba(0, 0, 0, 0.4) 0px 0.5rem 1rem,
+        ),
+        overlay: rgba(255, 255, 255, 0.5),
+    ),
+    dark: (
+        main: $main--dark,
+        main-shadow: $main-shadow--dark,
+        main-light: $main-light--dark,
+        highlight: $highlight--dark,
+        highlight-shadow: $highlight-shadow--dark,
+        input-box-shadow: $input-box-shadow--dark,
+        header: $header--dark,
+
+        bg: $gray5,
+        bg-nav: linear-gradient(to right, $gray5, $gray6),
+        bg-dropdown: $gray6,
+        text: $gray1,
+        border-color: $purple,
+        bg-solar: $blue,
+        background: $gray6,
+        shadow: (
+            rgba(255, 255, 255, 0.32) 0px 2px 4px 0px,
+            rgba(255, 255, 255, 0.62) 0px 2px 16px 0px,
+        ),
+        shadow-md: (
+            rgba(0, 0, 0, 0.25) 0px 14px 28px,
+            rgba(0, 0, 0, 0.22) 0px 10px 10px,
+        ),
+        shadow-dark: rgba(255, 255, 255, 0.4) 0px 0.5rem 1rem,
+        overlay: rgba(0, 0, 0, 0.5),
+    ),
+);
+
+@mixin themed() {
+    @each $theme, $map in $themes {
+        .theme--#{$theme} & {
+            $theme-map: () !global;
+            @each $key, $submap in $map {
+                $value: map-get(map-get($themes, $theme), "#{$key}");
+                $theme-map: map-merge(
+                    $theme-map,
+                    (
+                        $key: $value,
+                    )
+                ) !global;
+            }
+            @content;
+            $theme-map: null !global;
+        }
+    }
+}
+
+@function t($key) {
+    @return map-get($theme-map, $key);
+}
