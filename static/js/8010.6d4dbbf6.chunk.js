@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunksparshjain2000_github_io=self.webpackChunksparshjain2000_github_io||[]).push([[8010],{8010:(s,i,a)=>{s.exports=a.p+"static/media/tailwindcss.68603ef4173093c409dc.svg"}}]);

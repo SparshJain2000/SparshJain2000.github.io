@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunksparshjain2000_github_io=self.webpackChunksparshjain2000_github_io||[]).push([[2622],{2622:(a,s,i)=>{a.exports=i.p+"static/media/avatar_dark.4f0db15d86597da912b5.png"}}]);
