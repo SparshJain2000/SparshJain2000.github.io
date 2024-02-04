@@ -16,7 +16,6 @@
     .btn-primary {
         color: white;
         @include themed() {
-            // background: t("bg") !important;
             background-color: t("main");
             border-color: t("main");
             color: $gray0;
