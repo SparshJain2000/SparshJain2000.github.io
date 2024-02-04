@@ -88,7 +88,7 @@
         &.active {
             @include themed() {
                 color: t("highlight") !important;
-                border-bottom: 0.18rem solid t("highlight");
+                border-bottom: 0.2rem solid t("highlight");
             }
             font-weight: 500;
 
@@ -102,6 +102,7 @@
     }
 }
 .nav-link {
+    text-decoration: none !important;
     .icon {
         font-size: 1.1rem;
         margin-top: auto;
