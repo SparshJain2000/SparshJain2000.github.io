@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunksparshjain2000_github_io=self.webpackChunksparshjain2000_github_io||[]).push([[5370],{5370:(s,e,a)=>{s.exports=a.p+"static/media/nextjs.1b2b52c044b9dcea988e.svg"}}]);

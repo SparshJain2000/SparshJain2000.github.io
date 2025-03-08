@@ -1,0 +1,67 @@
+{
+    "short_name": "Portfolio",
+    "name": "Portfolio | Sparsh Jain",
+    "icons": [
+        {
+            "src": "favicon.ico",
+            "sizes": "64x64 32x32 24x24 16x16",
+            "type": "image/x-icon"
+        },
+        {
+            "src": "favicon-16x16.png",
+            "type": "image/png",
+            "sizes": "16x16"
+        },
+        {
+            "src": "favicon-32x32.png",
+            "type": "image/png",
+            "sizes": "32x32"
+        },
+        {
+            "src": "favicon-96x96.png",
+            "type": "image/png",
+            "sizes": "96x96"
+        },
+        {
+            "src": "favicon-512x512.png",
+            "type": "image/png",
+            "sizes": "512x512"
+        }
+    ],
+    "start_url": ".",
+    "display": "standalone",
+    "theme_color": "#000000",
+    "background_color": "#ffffff",
+    "shortcuts": [
+        {
+            "name": "About Me",
+            "short_name": "About",
+            "url": "/#one",
+            "icons": [{ "src": "/short.png", "sizes": "182x182" }]
+        },
+        {
+            "name": "Work Experience",
+            "short_name": "Experience",
+            "url": "/#two",
+            "icons": [{ "src": "/short.png", "sizes": "182x182" }]
+        },
+        {
+            "name": "Projects",
+            "short_name": "Projects",
+            "url": "/#three",
+            "icons": [{ "src": "/short.png", "sizes": "182x182" }]
+        },
+        {
+            "name": "My skills",
+            "short_name": "Skills",
+            "url": "/#five",
+            "icons": [{ "src": "/short.png", "sizes": "182x182" }]
+        },
+        {
+            "name": "Get in touch",
+            "short_name": "Contact",
+            "url": "/#four",
+            "icons": [{ "src": "/short.png", "sizes": "182x182" }]
+        }
+    ]
+}
