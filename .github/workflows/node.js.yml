@@ -37,13 +37,19 @@ jobs:
 
     - name: List build directory
       run: ls -la ./build
-
+      
     - name: 🚀 Deploy to GitHub Pages 🚀
-      if: github.ref == 'refs/heads/master'
-      uses: peaceiris/actions-gh-pages@v4
+      uses: JamesIves/github-pages-deploy-action@v4
       with:
-        github_token: ${{ secrets.ACTIONS_DEPLOY_ACCESS_TOKEN }}
-        publish_dir: ./build
+        folder: build  # The folder the action should deploy (might be "dist" depending on your build setup)
+        branch: gh-pages  # The branch the action should deploy to
+        clean: true  # Automatically remove deleted files from the deploy branch
+    # - name: 🚀 Deploy to GitHub Pages 🚀
+    #   if: github.ref == 'refs/heads/master'
+    #   uses: peaceiris/actions-gh-pages@v4
+    #   with:
+    #     github_token: ${{ secrets.ACTIONS_DEPLOY_ACCESS_TOKEN }}
+    #     publish_dir: ./build
     
     - name: List build directory
       run: ls -la ./build
