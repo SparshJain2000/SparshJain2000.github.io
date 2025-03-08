@@ -1,0 +1,62 @@
+# This workflow will do a clean installation of node dependencies, cache/restore them, build the source code and run tests across different versions of node
+# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-nodejs
+
+name: Node.js CI
+
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [21.x]
+        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
+
+    steps:
+    - uses: actions/checkout@v4
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v4
+      with:
+        node-version: ${{ matrix.node-version }}
+        cache: 'npm'
+    
+    - name: Install dependencies
+      run: npm ci
+      
+    - name: Build
+      run: npm run build
+      env:
+       CI: false
+
+    - name: List build directory
+      run: ls -la ./build
+      
+    - name: 🚀 Deploy to GitHub Pages 🚀
+      if: github.ref == 'refs/heads/master'
+      # you can not change the name of this action.
+      uses: JamesIves/github-pages-deploy-action@4.1.4
+      with:
+        folder: build  # The folder the action should deploy (might be "dist" depending on your build setup)
+        branch: gh-pages_2  # The branch the action should deploy to
+        clean: true  # Automatically remove deleted files from the deploy branch
+    # - name: 🚀 Deploy to GitHub Pages 🚀
+    #   if: github.ref == 'refs/heads/master'
+    #   uses: peaceiris/actions-gh-pages@v4
+    #   with:
+    #     github_token: ${{ secrets.ACTIONS_DEPLOY_ACCESS_TOKEN }}
+    #     publish_dir: ./build
+    
+    - name: List build directory
+      run: ls -la ./build
+
+
+
+
+

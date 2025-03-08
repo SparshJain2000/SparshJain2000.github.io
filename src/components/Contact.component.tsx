@@ -36,7 +36,7 @@ const Contact = () => {
                             type='text'
                             className='form-control'
                             id='email'
-                            placeholder='xyz@gmail.com'
+                            placeholder='john.doe@gmail.com'
                             aria-label='Email'
                             name='email'
                             aria-describedby='basic-addon1'
@@ -66,7 +66,7 @@ const Contact = () => {
                             width='100%'
                             height='100%'
                             id='gmap_canvas'
-                            src='https://maps.google.com/maps?q=bellandur&t=&z=10&ie=UTF8&iwloc=&output=embed'
+                            src='https://maps.google.com/maps?q=gunjur&t=&z=10&ie=UTF8&iwloc=&output=embed'
                             frameBorder={0}
                             scrolling='no'
                             marginHeight={0}
