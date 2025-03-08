@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunksparshjain2000_github_io=self.webpackChunksparshjain2000_github_io||[]).push([[2027],{2027:(s,a,i)=>{s.exports=i.p+"static/media/docker.7c4f8db753ab9117f8d5.png"}}]);

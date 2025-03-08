@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunksparshjain2000_github_io=self.webpackChunksparshjain2000_github_io||[]).push([[3038],{3038:(s,a,i)=>{s.exports=i.p+"static/media/result.cd935a8d43014f233fd5.jpg"}}]);

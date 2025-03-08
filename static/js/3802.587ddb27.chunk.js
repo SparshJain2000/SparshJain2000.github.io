@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunksparshjain2000_github_io=self.webpackChunksparshjain2000_github_io||[]).push([[3802],{3802:(s,e,i)=>{s.exports=i.p+"static/media/06.11388f3c6d9e885b88de.webp"}}]);
