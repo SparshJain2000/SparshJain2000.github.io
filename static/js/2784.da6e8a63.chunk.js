@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunksparshjain2000_github_io=self.webpackChunksparshjain2000_github_io||[]).push([[2784],{2784:(a,s,i)=>{a.exports=i.p+"static/media/moon.a3ac80184a2dbdfa92e5.svg"}}]);

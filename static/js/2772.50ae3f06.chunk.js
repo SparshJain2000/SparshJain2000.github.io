@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunksparshjain2000_github_io=self.webpackChunksparshjain2000_github_io||[]).push([[2772],{2772:(s,e,i)=>{s.exports=i.p+"static/media/spring.0eb42750e23ed1f7ccfb.png"}}]);

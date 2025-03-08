@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunksparshjain2000_github_io=self.webpackChunksparshjain2000_github_io||[]).push([[3247],{3247:(s,a,i)=>{s.exports=i.p+"static/media/material.c0958f97929482097efd.svg"}}]);

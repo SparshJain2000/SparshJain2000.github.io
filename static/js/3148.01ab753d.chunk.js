@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunksparshjain2000_github_io=self.webpackChunksparshjain2000_github_io||[]).push([[3148],{3148:(a,s,e)=>{a.exports=e.p+"static/media/avatar.224a90d50b56cef1569d.webp"}}]);
