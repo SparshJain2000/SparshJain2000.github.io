@@ -39,7 +39,9 @@ jobs:
       run: ls -la ./build
       
     - name: 🚀 Deploy to GitHub Pages 🚀
-      uses: JamesIves/github-pages-deploy-action@v4
+      if: github.ref == 'refs/heads/master'
+      # you can not change the name of this action.
+      uses: JamesIves/github-pages-deploy-action@4.1.4
       with:
         folder: build  # The folder the action should deploy (might be "dist" depending on your build setup)
         branch: gh-pages  # The branch the action should deploy to
