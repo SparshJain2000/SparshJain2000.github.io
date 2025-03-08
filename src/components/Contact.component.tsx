@@ -36,7 +36,7 @@ const Contact = () => {
                             type='text'
                             className='form-control'
                             id='email'
-                            placeholder='xyz@gmail.com'
+                            placeholder='john.doe@gmail.com'
                             aria-label='Email'
                             name='email'
                             aria-describedby='basic-addon1'
