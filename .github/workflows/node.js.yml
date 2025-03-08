@@ -45,7 +45,8 @@ jobs:
         github_token: ${{ secrets.ACTIONS_DEPLOY_ACCESS_TOKEN }}
         publish_dir: ./build
     
-
+    - name: List build directory
+      run: ls -la ./build
 
 
 
