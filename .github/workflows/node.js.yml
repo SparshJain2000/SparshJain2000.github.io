@@ -44,7 +44,7 @@ jobs:
       uses: JamesIves/github-pages-deploy-action@4.1.4
       with:
         folder: build  # The folder the action should deploy (might be "dist" depending on your build setup)
-        branch: gh-pages  # The branch the action should deploy to
+        branch: gh-pages_2  # The branch the action should deploy to
         clean: true  # Automatically remove deleted files from the deploy branch
     # - name: 🚀 Deploy to GitHub Pages 🚀
     #   if: github.ref == 'refs/heads/master'
