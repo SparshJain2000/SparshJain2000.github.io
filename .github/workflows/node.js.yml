@@ -30,11 +30,10 @@ jobs:
     - name: Install dependencies
       run: npm ci
       
-    - name: Update caniuse-lite database
-      run: npx update-browserslist-db@latest
-          
     - name: Build
       run: npm run build
+      env:
+       CI: false
       
     - name: 🚀 Deploy to GitHub Pages 🚀
       if: github.ref == 'refs/heads/master'
