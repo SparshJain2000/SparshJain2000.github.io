@@ -23,7 +23,7 @@ function App() {
     const { scrollY } = useScroll();
     const topFunction = () => {
         if (scrollY > 200) window.scrollTo({ top: 0, behavior: "smooth" });
-        else footerRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+        else footerRef.current?.scrollIntoView({ behavior: "smooth", block: "end" });
     };
     return (
         <ErrorBoundary fallback={<>⚠️ Something went wrong</>}>
