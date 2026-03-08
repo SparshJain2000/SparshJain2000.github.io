@@ -18,7 +18,7 @@ const WorkCard = ({ title, link, description, duration }: WorkCardProp) => {
                 <div>
                     <ul>
                         {description.map((li, i) => (
-                            <span key={i}>{li}</span>
+                            <li key={i} dangerouslySetInnerHTML={{ __html: li }} />
                         ))}
                     </ul>
                 </div>

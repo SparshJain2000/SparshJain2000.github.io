@@ -9,15 +9,22 @@ import sun from "./assets/images/sun.svg";
 import moon from "./assets/images/moon.svg";
 import { useTheme } from "./hooks/useTheme";
 import Header from "./components/Header.component";
-import { Suspense, createContext } from "react";
+import { Suspense, createContext, useRef } from "react";
 import Skills from "./components/Skills.component";
 import Loader from "./components/Loader.component";
 import { ErrorBoundary } from "react-error-boundary";
+import { useScroll } from "./hooks/useScroll";
 
 export const ThemeContext = createContext("light");
 function App() {
     const [theme, toggleTheme] = useTheme();
+    const footerRef = useRef<HTMLDivElement | null>(null);
 
+    const { scrollY } = useScroll();
+    const topFunction = () => {
+        if (scrollY > 200) window.scrollTo({ top: 0, behavior: "smooth" });
+        else footerRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+    };
     return (
         <ErrorBoundary fallback={<>⚠️ Something went wrong</>}>
             <ThemeContext.Provider value={theme}>
@@ -25,11 +32,17 @@ function App() {
                     <button className={`btn btn-${theme} flex-center shadow`} id='themeToggler' onClick={() => toggleTheme()} value='Light' name='themeToggle'>
                         <img src={theme === "dark" ? moon : sun} alt='themeIcon' id='theme' />
                     </button>
+                    <button
+                        className={`absolute bottom-0 right-0 bg-white btn btn-scroll btn-${theme} flex-center shadow hide`}
+                        id='scrollTop'
+                        onClick={topFunction}
+                        name='scrollTop'>
+                        <i className={`fa fa-chevron-${scrollY > 200 ? "up" : "down"} text-highlight`} aria-hidden='true'></i>
+                    </button>
                     <div className='body'>
                         <Navbar />
                         <div className='body-container'>
                             <Header />
-                            {/* <Sidebar></Sidebar> */}
                             <div id='main'>
                                 <Suspense fallback={<Loader className='mx-auto my-3 lg' />}>
                                     <Intro />
@@ -47,7 +60,7 @@ function App() {
                                     <Contact />
                                 </Suspense>
                             </div>
-                            <div className='bottom-footer'>
+                            <div className='bottom-footer' ref={footerRef}>
                                 <Footer />
                             </div>
                         </div>

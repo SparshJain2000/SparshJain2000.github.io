@@ -1,0 +1,96 @@
+{
+    "about": "I am a <strong class='text-highlight'>Senior Software Engineer</strong> with a <strong class='text-highlight'>Bachelor's degree in Information Technology</strong> from <strong class='text-highlight'>VIT Vellore</strong>. I specialize in building scalable backend systems and <strong class='text-highlight'>search infrastructure</strong>, with a strong focus on semantic retrieval, distributed services, and data-intensive platforms. <br /> <br /> My core expertise lies in backend and platform engineering using technologies such as <strong class='text-highlight'>Java, Spring Boot, Python, Node.js, and distributed microservices</strong>. I have extensive experience designing and implementing search and data platforms using <strong class='text-highlight'>Elasticsearch, vector databases, and large-scale indexing pipelines</strong>. I also work across modern cloud-native environments leveraging <strong class='text-highlight'>Docker, Kubernetes / OpenShift, CI/CD pipelines</strong>, and cloud platforms. <br /> <br /> Throughout my professional experience, I have built scalable APIs, search services, and data processing pipelines that support high-performance applications. I enjoy solving complex engineering problems related to <strong class='text-highlight'>information retrieval, system scalability, and distributed architectures</strong>. I focus on writing clean, maintainable code and designing systems that are reliable, observable, and easy to evolve as products grow.",
+
+    "work": [
+        {
+            "title": "Senior Software Engineer",
+            "link": {
+                "href": "https://www.wellsfargo.com/",
+                "target": "_blank",
+                "content": "Wells Fargo"
+            },
+            "description": [
+                "Designed and implemented scalable <strong class='text-highlight'>semantic and vector search</strong> platforms using technologies such as <strong class='text-highlight'>Elasticsearch</strong> and <strong class='text-highlight'>Milvus</strong>, enabling efficient retrieval across large-scale enterprise datasets.",
+                "Built distributed backend services and ingestion pipelines using <strong class='text-highlight'>Python, FastAPI, Node.js and Java microservices</strong> to process unstructured content, generate embeddings and index metadata for high performance search workloads.",
+                "Developed automated <strong class='text-highlight'>search relevancy benchmarking</strong> frameworks to evaluate ranking quality across different retrieval strategies using metrics such as recall and ranking effectiveness.",
+                "Led migration and modernization of backend services to <strong class='text-highlight'>Kubernetes / OpenShift</strong> based infrastructure with autoscaling and improved reliability, enabling highly available cloud-native deployments."
+            ],
+            "duration": "Feb 2025 - Present"
+        },
+        {
+            "title": "Software Engineer",
+            "link": {
+                "href": "https://www.wellsfargo.com/",
+                "target": "_blank",
+                "content": "Wells Fargo"
+            },
+            "description": [
+                "Architected and developed <strong class='text-highlight'>search microservices</strong> using <strong class='text-highlight'>Java, Spring Boot, MongoDB and Elasticsearch</strong> to support scalable indexing, querying and document management APIs.",
+                "Implemented hybrid search architectures combining <strong class='text-highlight'>BM25, sparse vector and dense vector retrieval</strong> techniques to improve relevance and ranking quality in large document collections.",
+                "Engineered <strong class='text-highlight'>Learning-to-Rank (LTR)</strong> pipelines using user interaction signals to improve personalized search relevance and ranking performance.",
+                "Built internal dashboards and tooling using <strong class='text-highlight'>Kibana and React</strong> to analyze query behavior, debug ranking signals and support search relevance tuning."
+            ],
+            "duration": "Aug 2023 - Feb 2025"
+        },
+        {
+            "title": "Program Associate",
+            "link": {
+                "href": "https://www.wellsfargo.com/",
+                "target": "_blank",
+                "content": "Wells Fargo"
+            },
+            "description": [
+                "Developed backend integrations between enterprise systems and <strong class='text-highlight'>cloud object storage</strong> using <strong class='text-highlight'>RESTful services</strong> to support large-scale document ingestion workflows.",
+                "Built automation tools using <strong class='text-highlight'>Spring Boot and CLI utilities</strong> to monitor multiple distributed applications and streamline operational workflows.",
+                "Implemented <strong class='text-highlight'>BDD-based automated testing</strong> using <strong class='text-highlight'>Karate, Selenium and Cucumber</strong> and integrated results into <strong class='text-highlight'>Jenkins CI/CD</strong> pipelines to improve testing coverage.",
+                "Collaborated across backend and platform teams to enhance reliability, monitoring and deployment workflows for microservice-based applications."
+            ],
+            "duration": "Jul 2022 - Aug 2023"
+        },
+        {
+            "title": "Intern Analyst",
+            "link": {
+                "href": "https://www.wellsfargo.com/",
+                "target": "_blank",
+                "content": "Wells Fargo"
+            },
+            "description": [
+                "Contributed to development of enterprise backend services using <strong class='text-highlight'>Grails (Spring)</strong> and implemented <strong class='text-highlight'>SonarQube quality gates</strong> with comprehensive unit testing achieving high code coverage.",
+                "Improved frontend architecture by migrating legacy applications from <strong class='text-highlight'>AngularJS to Angular</strong>, enhancing performance and maintainability.",
+                "Resolved technical debt and refactored legacy modules by addressing <strong class='text-highlight'>static analysis issues and code smells</strong> to improve code quality.",
+                "Worked across backend and frontend stacks while participating in full software development lifecycle including testing and deployment."
+            ],
+            "duration": "Jan 2022 - Jul 2022"
+        },
+        {
+            "title": "SDE Summer Intern",
+            "link": {
+                "href": "https://www.wellsfargo.com/",
+                "target": "_blank",
+                "content": "Wells Fargo"
+            },
+            "description": [
+                "Developed a predictive analytics solution using <strong class='text-highlight'>Python and machine learning libraries</strong> to analyze financial datasets and evaluate predictive models.",
+                "Built a full-stack web application using <strong class='text-highlight'>React, RESTful APIs and PostgreSQL</strong> to visualize and interact with model predictions.",
+                "Collaborated in an agile team environment to design application architecture, implement features and deploy the platform for internal demonstrations.",
+                "Participated in end-to-end software development lifecycle including data preprocessing, model development, testing and deployment."
+            ],
+            "duration": "May 2021 - Jul 2021"
+        },
+        {
+            "title": "Freelance Web Developer",
+            "link": {
+                "href": "https://vit.ac.in/ASCE2021/",
+                "target": "_blank",
+                "content": "ASCE-VIT"
+            },
+            "description": [
+                "Designed and developed a responsive web platform using <strong class='text-highlight'>React, Bootstrap and Sass</strong> with modular components and optimized UI performance.",
+                "Implemented modern frontend architecture with reusable components, responsive layouts and cross-browser compatibility.",
+                "Managed the complete development lifecycle including design, development, testing and deployment.",
+                "Collaborated with stakeholders to deliver a scalable and maintainable web solution."
+            ],
+            "duration": "Dec 2020 - Feb 2021"
+        }
+    ]
+}
