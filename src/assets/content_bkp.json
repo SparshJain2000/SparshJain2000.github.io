@@ -48,6 +48,21 @@
             "duration": "Jul 2022 - Aug 2023"
         },
         {
+            "title": "Intern Analyst",
+            "link": {
+                "href": "https://www.wellsfargo.com/",
+                "target": "_blank",
+                "content": "Wells Fargo"
+            },
+            "description": [
+                "Contributed to development of enterprise backend services using <strong class='text-highlight'>Grails (Spring)</strong> and implemented <strong class='text-highlight'>SonarQube quality gates</strong> with comprehensive unit testing achieving high code coverage.",
+                "Improved frontend architecture by migrating legacy applications from <strong class='text-highlight'>AngularJS to Angular</strong>, enhancing performance and maintainability.",
+                "Resolved technical debt and refactored legacy modules by addressing <strong class='text-highlight'>static analysis issues and code smells</strong> to improve code quality.",
+                "Worked across backend and frontend stacks while participating in full software development lifecycle including testing and deployment."
+            ],
+            "duration": "Jan 2022 - Jul 2022"
+        },
+        {
             "title": "SDE Summer Intern",
             "link": {
                 "href": "https://www.wellsfargo.com/",
