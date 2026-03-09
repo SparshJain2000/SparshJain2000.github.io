@@ -3,12 +3,11 @@ import { FormEventHandler } from "react";
 const Contact = () => {
     const sendEmail: FormEventHandler<HTMLFormElement> = (e) => {
         const {
-            email: { value: email },
             userName: { value: userName },
             message: { value: message },
         } = e.target as HTMLFormElement;
 
-        window.location.href = `mailto:jainsparsh0801@gmail.com?subject=Feedback from ${userName}&body=${message}%0A%0AThanks,%0A${userName} | ${email}`;
+        window.location.href = `mailto:jainsparsh0801@gmail.com?subject=Feedback from ${userName}&body=${message}%0A%0AThanks,%0A${userName}`;
         e.preventDefault();
     };
     return (
@@ -30,7 +29,7 @@ const Contact = () => {
                             aria-describedby='basic-addon1'
                         />
                     </div>
-                    <div className='form-group col-12 mb-2'>
+                    {/* <div className='form-group col-12 mb-2'>
                         <label htmlFor='email'>Your Email</label>
                         <input
                             type='text'
@@ -41,7 +40,7 @@ const Contact = () => {
                             name='email'
                             aria-describedby='basic-addon1'
                         />
-                    </div>
+                    </div> */}
                     <div className='form-group col-12 mb-2'>
                         <label htmlFor='message'>Your Message</label>
                         <textarea
@@ -59,14 +58,14 @@ const Contact = () => {
                         </button>
                     </div>
                 </form>
-                <div className='col-12 col-lg-7 mapouter'>
+                <div className='col-12 col-lg-7 mapouter pt-2'>
                     <div className='gmap_canvas'>
                         <iframe
                             title='Map'
                             width='100%'
                             height='100%'
                             id='gmap_canvas'
-                            src='https://maps.google.com/maps?q=gunjur&t=&z=10&ie=UTF8&iwloc=&output=embed'
+                            src='https://maps.google.com/maps?q=bellandur&t=&z=10&ie=UTF8&iwloc=&output=embed'
                             frameBorder={0}
                             scrolling='no'
                             marginHeight={0}
