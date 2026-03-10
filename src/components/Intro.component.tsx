@@ -10,7 +10,7 @@ const Intro = () => {
             </header>
 
             <h3 className='col-text'>
-                Hello ! My name is Sparsh Jain. I am a <strong className='text-highlight'>Full stack web developer.</strong>
+                Hello ! My name is <strong className='text-highlight'>Sparsh Jain</strong>.
             </h3>
             <p dangerouslySetInnerHTML={{ __html: content.about }} />
         </section>

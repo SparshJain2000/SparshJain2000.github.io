@@ -29,18 +29,6 @@ const Contact = () => {
                             aria-describedby='basic-addon1'
                         />
                     </div>
-                    {/* <div className='form-group col-12 mb-2'>
-                        <label htmlFor='email'>Your Email</label>
-                        <input
-                            type='text'
-                            className='form-control'
-                            id='email'
-                            placeholder='john.doe@gmail.com'
-                            aria-label='Email'
-                            name='email'
-                            aria-describedby='basic-addon1'
-                        />
-                    </div> */}
                     <div className='form-group col-12 mb-2'>
                         <label htmlFor='message'>Your Message</label>
                         <textarea
