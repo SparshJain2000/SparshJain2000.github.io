@@ -5,9 +5,6 @@ import { useVisible } from "../hooks/useVisible";
 import Loader from "./Loader.component";
 
 const ProjectCard = ({ title, description, deployed, github, image }: ProjectCardProp) => {
-    // const [src, setSrc] = useState("../images/1.png");
-    // const [src, setSrc] = useState("../assets/images/compressed/" + image + ".jpg");
-
     const [placeholder, setPlaceholder] = useState(null);
     const [img, setImg] = useState();
 
