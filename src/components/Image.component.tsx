@@ -5,7 +5,6 @@ const Image = ({ src, loader, ...props }: { src: string; loader?: string; classN
     const [img, setImg] = useState(null);
     const [imgLoading, setImgLoading] = useState(true);
     useEffect(() => {
-        // import("../assets/images/icons/" + src)
         import("../assets/images/" + src)
             // import(src)
             .then((image) => setImg(image.default))
@@ -42,9 +41,21 @@ const Image = ({ src, loader, ...props }: { src: string; loader?: string; classN
     }, [img]);
 
     return (
-        <span className='relative'>
-            {imgLoading && <Loader className={"mx-auto my-3 " + loader} />}
-            {img && <img loading='lazy' src={img} {...props} className={props?.className + (imgLoading ? " invisible " : "")} alt={src} ref={element} />}
+        <span className='relative' style={{ lineHeight: "normal" }}>
+            {imgLoading && <Loader className={loader + " mx-auto"} />}
+            {img && (
+                <img
+                    loading='lazy'
+                    src={src.startsWith("http") ? src : img}
+                    {...props}
+                    className={props?.className + (imgLoading ? " invisible " : "")}
+                    alt={src}
+                    ref={element}
+                />
+            )}
+            {src.startsWith("http") && (
+                <img loading='lazy' src={src} {...props} className={props?.className + (imgLoading ? " invisible " : "")} alt={src} ref={element} />
+            )}
         </span>
     );
 };

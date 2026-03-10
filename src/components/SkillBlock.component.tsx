@@ -28,7 +28,7 @@ const SkillBlock = ({ title, children, icon }: { title: string; children: ReactE
             </div>
 
             <div className={" hideme " + (childVisible && show && "is-visible ")} ref={child}>
-                <div className={!show ? "display-none" : ""}>{children}</div>
+                <div className={!show ? "display-none" : "flex row justify-content-between flex-wrap"}>{children}</div>
             </div>
         </>
     );
