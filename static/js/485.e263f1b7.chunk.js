@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunksparshjain2000_github_io=self.webpackChunksparshjain2000_github_io||[]).push([[485],{485:(s,a,i)=>{s.exports=i.p+"static/media/harness.c0421160c001024734a7.svg"}}]);

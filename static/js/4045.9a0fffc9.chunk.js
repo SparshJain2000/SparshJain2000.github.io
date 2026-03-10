@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunksparshjain2000_github_io=self.webpackChunksparshjain2000_github_io||[]).push([[4045],{4045:(s,a,i)=>{s.exports=i.p+"static/media/fastapi.4dbff8f1d0f1d25e084d.svg"}}]);

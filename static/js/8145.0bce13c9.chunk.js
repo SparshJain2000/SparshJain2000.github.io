@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunksparshjain2000_github_io=self.webpackChunksparshjain2000_github_io||[]).push([[8145],{8145:(s,a,e)=>{s.exports=e.p+"static/media/huggingface.72cfc86ea047ae8477f2.svg"}}]);

@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunksparshjain2000_github_io=self.webpackChunksparshjain2000_github_io||[]).push([[4825],{4825:(s,a,e)=>{s.exports=e.p+"static/media/gradle.83238d9b6a583074ddea.svg"}}]);

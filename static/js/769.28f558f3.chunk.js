@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunksparshjain2000_github_io=self.webpackChunksparshjain2000_github_io||[]).push([[769],{769:(s,i,e)=>{s.exports=e.p+"static/media/openshift.7e9d306bb9d0169b357f.svg"}}]);

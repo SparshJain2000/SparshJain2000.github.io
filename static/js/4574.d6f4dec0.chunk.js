@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunksparshjain2000_github_io=self.webpackChunksparshjain2000_github_io||[]).push([[4574],{4574:(s,a,e)=>{s.exports=e.p+"static/media/azure.f2f67745932c2bb20e40.svg"}}]);

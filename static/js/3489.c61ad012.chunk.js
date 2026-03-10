@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunksparshjain2000_github_io=self.webpackChunksparshjain2000_github_io||[]).push([[3489],{3489:(s,e,a)=>{s.exports=a.p+"static/media/kubernetes.5492fc433b3d65afc56e.svg"}}]);

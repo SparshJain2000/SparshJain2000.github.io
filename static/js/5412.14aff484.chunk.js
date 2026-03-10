@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunksparshjain2000_github_io=self.webpackChunksparshjain2000_github_io||[]).push([[5412],{5412:(s,e,a)=>{s.exports=a.p+"static/media/opensearch.e52d40d105bffff28235.svg"}}]);

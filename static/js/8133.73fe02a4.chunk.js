@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunksparshjain2000_github_io=self.webpackChunksparshjain2000_github_io||[]).push([[8133],{8133:(s,i,a)=>{s.exports=a.p+"static/media/milvus.508dce51a636e8226c55.svg"}}]);
