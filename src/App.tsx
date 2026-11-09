@@ -14,58 +14,20 @@ import Skills from "./components/Skills.component";
 import Loader from "./components/Loader.component";
 import { ErrorBoundary } from "react-error-boundary";
 import { useScroll } from "./hooks/useScroll";
+import { Route, Routes } from "react-router-dom";
+import Home from "./Home";
 
 export const ThemeContext = createContext("light");
 function App() {
     const [theme, toggleTheme] = useTheme();
-    const footerRef = useRef<HTMLDivElement | null>(null);
 
-    const { scrollY } = useScroll();
-    const topFunction = () => {
-        if (scrollY > 200) window.scrollTo({ top: 0, behavior: "smooth" });
-        else footerRef.current?.scrollIntoView({ behavior: "smooth", block: "end" });
-    };
     return (
         <ErrorBoundary fallback={<>⚠️ Something went wrong</>}>
             <ThemeContext.Provider value={theme}>
-                <div className={`theme ${theme === "dark" ? "theme--dark" : "theme--default"}`}>
-                    <button className={`btn btn-${theme} flex-center shadow`} id='themeToggler' onClick={() => toggleTheme()} value='Light' name='themeToggle'>
-                        <img src={theme === "dark" ? moon : sun} alt='themeIcon' id='theme' />
-                    </button>
-                    <button
-                        className={`absolute bottom-0 right-0 bg-white btn btn-scroll btn-${theme} flex-center shadow hide`}
-                        id='scrollTop'
-                        onClick={topFunction}
-                        name='scrollTop'>
-                        <i className={`fa fa-chevron-${scrollY > 200 ? "up" : "down"} text-highlight`} aria-hidden='true'></i>
-                    </button>
-                    <div className='body'>
-                        <Navbar />
-                        <div className='body-container'>
-                            <Header />
-                            <div id='main'>
-                                <Suspense fallback={<Loader className='mx-auto my-3 lg' />}>
-                                    <Intro />
-                                </Suspense>
-                                <Suspense fallback={<Loader className='mx-auto my-3 lg' />}>
-                                    <Work />
-                                </Suspense>
-                                <Suspense fallback={<Loader className='mx-auto my-3 lg' />}>
-                                    <Projects />
-                                </Suspense>
-                                <Suspense fallback={<Loader className='mx-auto my-3 lg' />}>
-                                    <Skills />
-                                </Suspense>
-                                <Suspense fallback={<Loader className='mx-auto my-3 lg' />}>
-                                    <Contact />
-                                </Suspense>
-                            </div>
-                            <div className='bottom-footer' ref={footerRef}>
-                                <Footer />
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <Routes>
+                    <Route path='/' element={<Home theme={theme} toggleTheme={toggleTheme} />} />
+                    <Route path='/blogs' element={<>hello MFs</>} />
+                </Routes>
             </ThemeContext.Provider>
         </ErrorBoundary>
     );
